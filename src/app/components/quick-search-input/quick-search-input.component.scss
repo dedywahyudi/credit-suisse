@@ -30,3 +30,20 @@
     color: $navbar-action-color;
   }
 }
+
+@media (max-width: $t-max-width) {
+  // search box wrapper
+  .form-inline {
+    position: relative;
+    margin-right: 35px;
+  }
+
+  .sbm-btn {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .form-control {
+    width: 288px;
+  }
+}

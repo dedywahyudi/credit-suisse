@@ -33,3 +33,13 @@
     letter-spacing: .5px;
   }
 }
+
+@media (max-width: $t-max-width) {
+  .saved-item {
+    font-size: 10.5px;
+    padding: 16px 0 16px 15px;
+    .saved-item-actions {
+      font-size: 13px;
+    }
+  }
+}

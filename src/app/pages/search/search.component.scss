@@ -66,6 +66,27 @@ app-page-layout {
   }
 }
 
+.filters-actions {
+  .backdrop {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: transparent;
+    opacity: 0;
+  }
+
+  > div {
+    display: flex;
+  }
+  .fa {
+    display: none;
+  }
+}
+
 app-page-tabs {
   /deep/ {
     .tabs-content {
@@ -103,6 +124,157 @@ app-quick-search-input {
       font-size: 14px;
       background: $panel-bg-color;
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  .search-results {
+    padding: 14px 25px;
+  }
+
+  app-page-tabs .fa-search {
+    font-size: 11px;
+    margin: 0 5px;
+  }
+
+  // keep tabs and search on same row
+  app-page-tabs /deep/ app-tabs {
+    .tabs-actions {
+      flex-direction: row;
+      align-items: center;
+
+      .tabs-content {
+        width: auto;
+      }
+    }
+  }
+
+  // active filters
+  .filters-header {
+    font-size: 9px;
+    margin-top: 18px;
+    strong {
+      margin-right: 16px;
+    }
+    .filter-item {
+      padding: 5px 10px;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+
+    .fix-mtop {
+      margin-top: -8px;
+    }
+  }
+
+  // dropdown with filter actions
+  .filters-actions {
+    position: relative;
+    > div {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      white-space: nowrap;
+      background: white;
+      padding: 10px 20px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+      z-index: 7;
+    }
+
+    &.active .backdrop {
+      display: block;
+    }
+
+    &.active > div {
+      display: block;
+    }
+
+    .fa {
+      display: block;
+      font-size: 15px;
+      opacity: .6;
+      cursor: pointer;
+      padding: 0 5px;
+      margin-right: -5px;
+    }
+
+    .link {
+      line-height: 22px;
+    }
+
+    .link + .link {
+      margin-left: 0;
+      padding-left: 0;
+      border-left-width: 0;
+    }
+  }
+
+  app-page-layout.collapsed-layout .search-results {
+    padding-right: 110px;
+    padding-left: 120px;
+  }
+
+  // customize the quick search input
+  app-quick-search-input {
+    /deep/ {
+      .sbm-btn {
+        font-size: 13px;
+      }
+
+      .form-control {
+        font-size: 10.5px;
+      }
+    }
+  }
+
+  .filters-header.query-search {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .row-fix {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .search-results {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  app-page-layout.collapsed-layout .search-results {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  // move sidebar togle button on this page
+  app-sidepanel {
+    /deep/ .side-panel {
+      &.collapsible .toggle-btn {
+        top: 100px;
+      }
+    }
+  }
+
+  // active filters
+  .filters-header {
+    strong {
+      align-self: flex-start;
+      margin-top: 3px;
+    }
+
+    .filters-actions {
+      align-self: flex-start;
+      margin-top: 3px;
+    }
+
+    .link {
+      align-self: flex-start;
+      margin-top: 2px;
     }
   }
 }

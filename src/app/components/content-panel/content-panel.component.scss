@@ -28,23 +28,23 @@ header {
 
   border-bottom: 1px solid $body-bg;
   flex: 0 0 auto;
+}
 
-  h3 {
-    margin: 0;
+.title {
+  margin: 0;
 
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 
-    // if p-title content provided, center it vertically
-    /deep/ [p-title] {
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
+  // if p-title content provided, center it vertically
+  /deep/ [p-title] {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
 
-      .fa {
-        margin: 0 31px 0 11px;
-        font-size: 26px;
-      }
+    .fa {
+      margin: 0 31px 0 11px;
+      font-size: 26px;
     }
   }
 }
@@ -224,6 +224,65 @@ header {
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  // content panel header
+  header {
+    height: 50px;
+  }
+
+  .title {
+    font-size: 13.5px;
+    /deep/ [p-title] .fa {
+      font-size: 24px;
+      margin: 0 20px 0 3px;
+    }
+  }
+
+  .sction-content {
+    max-height: calc(100% - 50px);
+  }
+
+  .panel-actions .action,
+  .panel-actions [p-action] {
+    font-size: 16px;
+  }
+
+  .panel-actions .fscreen {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  // content panel header
+  header {
+    height: 55px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .sction-content {
+    max-height: calc(100% - 53px);
+  }
+
+  .search-action {
+    input {
+      width: 100%;
+    }
+
+    /deep/ ngb-typeahead-window {
+      right: 0;
+      left: auto!important; // bottstrap sets left on element
+                            // this is fine for desktop, but on mobile
+                            // we need to have it in fixed position
+                            // that's why it is required to use !important
+      max-height: 155px;
+      overflow: hidden;
     }
   }
 }

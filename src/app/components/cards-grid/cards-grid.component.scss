@@ -56,3 +56,20 @@
     }
   }
 }
+
+@media (max-width: $t-max-width) {
+  .cards-row {
+    margin-top: -10px;
+
+    [class^="col-"] {
+      padding-top: 10px;
+    }
+  }
+
+  // change top right card icon size
+  .item /deep/ .ic-add {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+}

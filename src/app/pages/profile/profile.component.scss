@@ -165,3 +165,109 @@ app-content-panel {
     border: $sortable-ghost-el-border;
   }
 }
+
+
+@media (max-width: $t-max-width) {
+  .content-inner {
+    padding: 15px 10px;
+  }
+  .profile-page /deep/ {
+    .content-wrapper {
+      flex-direction: column;
+    }
+    .side-panel {
+      width: 100%!important;
+    }
+  }
+  .user-wrap {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 5px 10px 5px 15px;
+    align-items: center;
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      margin-right: 17px;
+    }
+
+    .user-info h3 {
+      margin: 0;
+    }
+
+    .btns-wrap {
+      margin-left: auto;
+      flex-direction: row;
+      margin-top: 0;
+      .btn {
+        width: 148px;
+        height: 38px;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      .btn + .btn {
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .settings-item {
+    .ic {
+      margin: 0 15px 0 23px;
+    }
+    .details {
+      padding-right: 15px;
+    }
+    .drag-handler {
+      margin-left: 28px;
+    }
+  }
+
+  app-content-panel + app-content-panel {
+    margin-top: 15px;
+  }
+
+  app-content-panel {
+    /deep/ {
+      .title {
+        font-size: 16px;
+
+        [p-title] .fa {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  .settings-list {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .content-inner {
+    padding: 10px;
+  }
+
+  app-content-panel + app-content-panel {
+    margin-top: 10px;
+  }
+
+  app-content-panel /deep/ .title {
+    font-size: 13.5px;
+  }
+
+  .settings-item .details {
+    font-size: 13px;
+  }
+
+  .user-wrap {
+    flex-wrap: wrap;
+    .btns-wrap {
+      width: 100%;
+      margin: 15px 5px 0;
+    }
+  }
+}

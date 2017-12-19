@@ -25,3 +25,26 @@ app-tabs {
 app-cards-grid /deep/ .cards-row {
   padding-bottom: 25px;
 }
+
+@media (max-width: $t-max-width) {
+  .tabs-content {
+    padding: 18px 21px 0;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  app-tabs,
+  .tab-content {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  // change page margin bottom
+  app-cards-grid /deep/ .cards-row {
+    padding-bottom: 5px;
+  }
+  :host {
+    margin-bottom: 10px;
+  }
+}

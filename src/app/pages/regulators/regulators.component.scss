@@ -11,7 +11,7 @@ app-page-layout {
 // sidebar styling
 app-sidepanel {
   /deep/ {
-    .side-panel {
+    .side-panel .content .content-inner {
       padding: 20px 0;
     }
   }
@@ -135,5 +135,93 @@ app-sidepanel {
   .fa {
     color: $panel-action-color;
     margin-right: 19px;
+  }
+}
+
+// sidebar isn't togglable on desktop
+@media (min-width: $t-max-width) {
+  app-sidepanel {
+    /deep/ {
+      .side-panel.collapsible .toggle-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  // sidebar styling
+  app-sidepanel {
+    /deep/ {
+      .side-panel {
+        &.collapsible .toggle-btn {
+          top: 15px;
+        }
+
+        .content .content-inner {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+
+  .country-title {
+    font-size: 12px;
+    margin: 10px 0 3px 20px;
+  }
+
+  // customize regulator list item
+  .reg-item {
+    height: 48px;
+    font-size: 12px;
+    padding-left: 20px;
+    &:hover,
+    &.active {
+      border-right-width: 1px;
+    }
+  }
+
+  .banner {
+    height: 110px;
+    padding: 20px 20px;
+
+    h3 {
+      font-size: 48px;
+      line-height: 34px;
+      margin: 0;
+
+      img + span {
+        margin-left: 8px;
+      }
+
+      img {
+        height: 35px;
+      }
+    }
+
+    sub {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  // customize the sort dropdown
+  .sort-wrapper {
+    font-size: 10.5px;
+    .fa {
+      margin-right: 14px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  app-sidepanel {
+    /deep/ {
+      .side-panel.collapsible {
+        .content .content-inner {
+          padding-right: 20px;
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,11 @@
 <div class="wrap">
   <!-- document icon -->
   <span class="icon">
-    <img [attr.src]="'/assets/img/'+data.type+'-doc-icon.png'" alt="" />
+    <img
+      [attr.srcset]="srcSet(data.type)"
+      [attr.src]="src(data.type)"
+      alt=""
+    />
   </span>
   <!-- document details -->
   <div class="details">

@@ -1,6 +1,6 @@
 <app-page-layout pageTitle="Regulations">
   <!-- sidebar regulations -->
-  <app-sidepanel>
+  <app-sidepanel collapsible #sidePanel="collapsible">
     <ul class="list org-list">
       <li *ngFor="let org of organizations">
         <h3 class="org-title">
@@ -11,7 +11,7 @@
         </h3>
         <ul class="list regulations-list">
           <ng-container *ngFor="let reg of org.regulations">
-            <li class="reg-item" (click)="select(reg)" [class.active]="selected===reg">
+            <li class="reg-item" (click)="select(reg);toggleSidebar()" [class.active]="selected===reg">
               {{reg.name}}
             </li>
           </ng-container>

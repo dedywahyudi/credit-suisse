@@ -3,7 +3,8 @@ import { Component, Input, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+  styleUrls: ['./side-nav.component.scss'],
+  exportAs: 'sideNav',
 })
 export class SideNavComponent {
   @Input() notifications = [];
@@ -20,7 +21,8 @@ export class SideNavComponent {
     this.unbind();
     if (this.toggled) {
       setTimeout(() => (
-        document.addEventListener('click', this.close, false)));
+        document.addEventListener('mousedown', this.close, false),
+        document.addEventListener('touchstart', this.close, false)));
     }
   }
 
@@ -40,7 +42,8 @@ export class SideNavComponent {
    * unbind Remove the click listeners
    */
   unbind() {
-    document.removeEventListener('click', this.close);
+    document.removeEventListener('mousedown', this.close);
+    document.removeEventListener('touchstart', this.close);
   }
 
   /**

@@ -3,8 +3,21 @@
 @import 'node_modules/bootstrap/scss/mixins';
 
 // bootstrap configs
+
+$t-min-width: 768px;
+$t-max-width: 1366px;
+$m-max-width: 767px;
+
 $grid-columns: 10;
 $grid-gutter-width: 22px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: $t-min-width,
+  lg: $t-max-width+1,
+  xl: 2000px
+);
 
 $primary: #1f6cae;
 $secondary: #9d0e2d;
@@ -134,3 +147,6 @@ $toggle-active-bg: #7abbf3;
 $glossary-title: #1b1b1b;
 $glossary-view-color: #232323;
 $glossary-search-border-color: #d7d7d7;
+$glossary-dd-color: #494e52;
+
+

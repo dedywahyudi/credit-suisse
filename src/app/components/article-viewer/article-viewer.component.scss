@@ -137,7 +137,7 @@ app-quick-search-input {
     ul {
       list-style: none;
       padding: 0;
-      margin: 5px 0 20  px;
+      margin: 5px 0 20px;
       li {
         &:before {
           content: "";
@@ -189,5 +189,132 @@ app-quick-search-input {
     margin-left: 10px;
     border-radius: 3px;
     font-weight: 600;
+  }
+}
+
+
+@media (max-width: $t-max-width) {
+  .sidebar {
+    font-size: 11px;
+    line-height: 11px;
+    width: 140px;
+    padding-bottom: 32px;
+    padding-right: 28px;
+  }
+
+  // cusomize the search input to fit in the sidebar
+  app-quick-search-input {
+    margin-top: 15px;
+    /deep/ {
+      .form-inline {
+        width: auto;
+        margin-left: -5px;
+        margin-right: -5px;
+
+        .btn {
+          font-size: 14px;
+        }
+      }
+
+      .form-control {
+        font-size: 11px;
+        padding: 8px 30px 8px 13px;
+      }
+    }
+
+    & + .art-li-header {
+      margin-top: 17px;
+    }
+  }
+
+  // the articles header
+  .art-li-header {
+    margin: 26px 0 17px;
+  }
+
+  // simple article item
+  .art-li-item {
+    line-height: 16px;
+    margin-top: 14px;
+  }
+
+  // main article wrapper
+  .viewer {
+    padding: 15px 0 15px 20px;
+    font-size: 11px;
+    line-height: 13px;
+
+    strong {
+      font-size: 12px;
+    }
+  }
+
+  // article navigation buttons
+  .nav {
+    flex-shrink: 0;
+    .prev,
+    .next {
+      font-size: 18px;
+    }
+  }
+
+  .article-description {
+    margin-top: 18px;
+    font-size: 13.5px;
+    /deep/ {
+      p {
+        margin-bottom: 15px;
+        line-height: 20px;
+      }
+
+      ul {
+        li {
+          line-height: 18px;
+          display: flex;
+          align-items: flex-start;
+          &:before {
+            margin-right: 10px;
+            margin-left: 1px;
+            margin-top: 7px;
+            display: inline-block;
+          }
+
+          & + li {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  // article "bottom" links
+  .article-related {
+    margin-top: 15px;
+  }
+
+  .article-next,
+  .article-help {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  // hide article sidebar on mobile
+  .sidebar {
+    display: none;
+  }
+
+  // main article wrapper
+  .viewer {
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-top: solid 1px $body-bg;
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .article-description {
+    font-size: 11px;
+    line-height: 24px;
   }
 }

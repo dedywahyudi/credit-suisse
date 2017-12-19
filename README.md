@@ -93,3 +93,7 @@ See your running app at `https://<application-name>.heroku.com`, in the given ex
 ``` sh
 $ heroku open
 ```
+
+
+### Responsive UI Proto updates
+Check the responsive prototype on: `https://m-csreg.herokuapp.com`

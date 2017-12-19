@@ -3,35 +3,49 @@
 .side-panel {
   height: 100%;
   width: 277px;
-  padding: 22px;
+  // padding: 22px;
   background-color: $light;
   flex: 0 0 auto;
+  position: relative;
 
   // customize the collapsible view
   &.collapsible {
-    position: relative;
     transition: width 0.15s ease;
+  }
 
+  &:not(.collapsible) {
     .toggle-btn {
-      position: absolute;
-      top: 86px;
-      right: -22px;
-      border-radius: 0 4px 4px 0;
-      background-color: $border-color;
-      font-size: 18px;
-      padding: 9px 8px;
-      color: $panel-action-color;
-      cursor: pointer;
-      .fa {
-        font-weight: 700;
-      }
+      display: none;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+  }
+
+  .content-inner {
+    padding: 22px;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 86px;
+    right: -22px;
+    border-radius: 0 4px 4px 0;
+    background-color: $border-color;
+    font-size: 18px;
+    padding: 9px 8px;
+    color: $panel-action-color;
+    cursor: pointer;
+    .fa {
+      font-weight: 700;
     }
   }
 
   // side panel colapsed
   &.hidden {
     width: 0;
-    padding: 0;
+    // padding: 0;
     .toggle-btn {
       background-color: $primary;
       color: white;
@@ -43,5 +57,92 @@
     /deep/ > *:not(.toggle-btn) {
       display: none;
     }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  .side-panel {
+    width: 207px;
+    position: relative;
+    transition: width 0.15s ease;
+
+    .content-inner {
+      padding: 16px;
+    }
+
+    .toggle-btn {
+      font-size: 16px;
+      padding: 5px 6px;
+      right: -18px;
+      top: 70px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .side-panel.collapsible {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    height: calc(100% - 48px);
+
+    z-index: 1;
+
+    .content {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .content-inner {
+      height: 100%;
+      min-width: 218px;
+      overflow: auto;
+
+      // hide scrollbar
+      padding-right: 36px;
+      margin-right: -20px;
+    }
+
+    &:not(.hidden) {
+      width: 250px;
+    }
+
+    &:not(.reversed) {
+      // on mobile switch toggled state with not toggled
+      // (default state is collapsed)
+      width: 0;
+      /deep/ > *:not(.toggle-btn) {
+        display: none;
+      }
+
+      .toggle-btn {
+        background-color: $primary;
+        color: white;
+        .fa {
+          transform: rotate(180deg);
+        }
+      }
+
+      &.hidden {
+        width: 250px;
+        .toggle-btn {
+          background-color: $border-color;
+          color: $panel-action-color;
+
+          .fa {
+            transform: rotate(0deg);
+          }
+        }
+
+        /deep/ > *:not(.toggle-btn) {
+          display: block;
+        }
+      }
+    }
+  }
+  // end collapsed behavior switch
+
+  /deep/ body.sidebar-toggled {
+    overflow: hidden;
   }
 }

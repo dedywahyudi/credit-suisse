@@ -3,10 +3,14 @@
 .navbar {
   width: 100%;
   background-color: white;
+  flex-wrap: nowrap;
 
   .navbar-brand {
     font-family: $alt-font;
     font-weight: bold;
+  }
+  .nav {
+    flex-wrap: nowrap;
   }
 
   // nav icons style
@@ -91,5 +95,100 @@
       font-size: 16px;
       color: darken($navbar-action-color, 12%);
     }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  .navbar {
+    min-height: 48px;
+    padding: 6px 20px;
+    .welcome {
+      display: none;
+    }
+    .avatar {
+      margin-right: 0;
+    }
+    /deep/ .popover {
+      // overite bootstrap component js
+      // desktop is aligned left and tablet right
+      left: auto!important;
+      right: 10px;
+      margin-right: 0;
+      font-size: 13px;
+      .arrow {
+        left: auto!important;
+        right: 18px;
+      }
+    }
+    .nav a {
+      margin-right: 22px;
+      .fa {
+        font-size: 22px;
+      }
+      .fa-comments-o {
+        font-size: 26px;
+      }
+      .fa-bell {
+        font-size: 20px;
+      }
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  .navbar-brand {
+    font-size: 16.5px
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .navbar-brand {
+    margin-left: 48px;
+    margin-right: 0;
+  }
+
+  .navbar .nav a {
+    margin-right: 20px;
+    .fa {
+      font-size: 20px;
+    }
+    .fa-comments-o {
+      font-size: 24px;
+    }
+    .fa-bell {
+      font-size: 18px;
+    }
+  }
+
+  // search box
+  :host .navbar /deep/ .form-inline {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    top: 48px;
+    left: 0;
+    padding: 7px;
+    background: white;
+    border-top: 1px solid $body-bg;
+    input {
+      width: 100%;
+    }
+  }
+
+  // hide search on mobile
+  app-quick-search-input {
+    display: none;
+    /deep/ {
+      .sbm-btn {
+        right: 6px;
+        top: -2px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar .nav a {
+    margin-right: 16px;
   }
 }

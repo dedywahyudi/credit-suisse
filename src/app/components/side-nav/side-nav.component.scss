@@ -51,8 +51,10 @@ nav ul {
 .nav-url {
   white-space: nowrap;
 
-  &:hover {
-    background: rgba($nav-active-item-text-color, .5);
+  @media (hover: hover) {
+    &:hover {
+      background: rgba($nav-active-item-text-color, .5);
+    }
   }
 
   &.active {
@@ -101,4 +103,39 @@ nav ul {
 // push badge to right
 .spacer {
   margin: 0 auto;
+}
+
+@media (max-width: $t-max-width) {
+  .wrap[expanded] {
+    width: 295px;
+  }
+
+  .nav-header,
+  nav ul li {
+    height: 48px;
+  }
+
+  .nav-item {
+    font-size: 13.5px;
+    padding: 0 13px 0 14px;
+    .icon {
+      font-size: 1.1em;
+      margin-right: 18px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .wrap {
+    transition: width .1s ease-in .05s, height .1s ease-in .05s;
+  }
+
+  .wrap:not([expanded]) {
+    height: 48px;
+    overflow: hidden;
+  }
+
+  .wrap[expanded] {
+    width: 250px;
+  }
 }

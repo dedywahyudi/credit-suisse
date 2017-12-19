@@ -19,11 +19,26 @@
   color: $panel-action-color;
 }
 
+.title-row {
+  width: 100%;
+  padding-right: 25px;
+}
+
+.title-col {
+  width: 100%;
+  padding-right: 31px;
+}
+
 // modal title
 .title {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 3px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .icon {
@@ -78,5 +93,78 @@
     content: ':';
     position: absolute;
     right: 3px;
+  }
+}
+
+@media (max-width: $t-max-width) {
+  // set modal width
+  .modal-body {
+    width: 512px;
+    padding: 30px;
+  }
+
+  // modal close btn
+  .btn-close {
+    top: 16px;
+    right: 16px;
+    width: 26px;
+    padding: 4px;
+  }
+  .icon img {
+    width: 25px;
+  }
+
+  // modal title
+  .title {
+    font-size: 12px;
+  }
+
+  .icon {
+    margin-right: 8px;
+  }
+
+  // doc date
+  .date {
+    margin-top: 2px;
+    .btn  {
+      padding-left: 8px;
+      padding-right: 8px;
+      .fa {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // doc details
+  .info {
+    margin: 20px 0 15px;
+    padding: 13px 15px 20px;
+    line-height: 18px;
+    font-size: 10.5px;
+  }
+  // details table row
+  .info-row {
+    .label {
+      width: 115px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .modal-body {
+    width: 355px;
+    width: calc(100vw - 20px);
+    padding: 22px;
+  }
+
+  .btn-close {
+    top: 6px;
+    right: 6px;
+    width: 26px;
+    padding: 4px;
+  }
+
+  .date {
+    margin-top: 7px;
   }
 }

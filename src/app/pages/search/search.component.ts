@@ -29,6 +29,7 @@ export class SearchPageComponent implements OnInit {
   public tabsData: Observable<any>;
   public resultsCount: Observable<any>;
   collapsed = false;
+  hasActiveDr = false;
 
   get isQuickSearch() {
     return this.searchQuery !== undefined;

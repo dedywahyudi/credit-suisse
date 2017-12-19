@@ -2,7 +2,7 @@
 <app-page-layout pageTitle="Search" [class.collapsed-layout]="collapsed">
   <!-- filters sidebar -->
   <!-- collapsed by default if in quicksearch mode -->
-  <app-sidepanel collapsible [isHidden]="isQuickSearch" (onToggle)="collapsed = $event">
+  <app-sidepanel collapsible [isHidden]="isQuickSearch" (onToggle)="collapsed = $event" [reversed]="isQuickSearch">
     <app-search-filters
       #filters="filters"
       [savedFilters]="savedFilters"
@@ -14,7 +14,7 @@
   <div class="search-results">
     <!-- render the quicksearch view if there's a query entry -->
     <!-- renders the tabbed results otherwise (documents/milestones) -->
-    <ng-container *ngIf="isQuickSearch; else tabsResults">
+    <div class="row-fix" *ngIf="isQuickSearch; else tabsResults">
       <!-- quicksearch view results -->
 
       <!-- the search input -->
@@ -41,7 +41,7 @@
         <!-- documents grid/results -->
         <app-cards-grid [tmpl]="doc" [items]="data.documents"></app-cards-grid>
       </ng-container>
-    </ng-container>
+    </div>
   </div>
 </app-page-layout>
 
@@ -62,26 +62,32 @@
   <div class="filters-header d-flex justify-content-between align-items-center" *ngIf="hasActiveFilters()">
     <div class="d-flex align-items-center">
       <strong>{{resultsCount|async}} Items found by:</strong>
-      <div class="filter-item" *ngIf="activeFilters.regulator">
-        {{activeFilters.regulator}}
-        <span class="close-icon" (click)="filters.clearFilters('regulator')">X</span>
-      </div>
-      <div class="filter-item" *ngIf="activeFilters.regulation">
-        {{activeFilters.regulation}}
-        <span class="close-icon" (click)="filters.clearFilters('regulation')">X</span>
-      </div>
-      <div class="filter-item" *ngIf="activeFilters.year">
-        {{activeFilters.year}}
-        <span class="close-icon" (click)="filters.clearFilters('year')">X</span>
-      </div>
-      <div class="filter-item" *ngIf="activeFilters.document">
-        {{activeFilters.document}}
-        <span class="close-icon" (click)="filters.clearFilters('document')">X</span>
+      <div class="d-flex flex-wrap fix-mtop">
+        <div class="filter-item" *ngIf="activeFilters.regulator">
+          {{activeFilters.regulator}}
+          <span class="close-icon" (click)="filters.clearFilters('regulator')">X</span>
+        </div>
+        <div class="filter-item" *ngIf="activeFilters.regulation">
+          {{activeFilters.regulation}}
+          <span class="close-icon" (click)="filters.clearFilters('regulation')">X</span>
+        </div>
+        <div class="filter-item" *ngIf="activeFilters.year">
+          {{activeFilters.year}}
+          <span class="close-icon" (click)="filters.clearFilters('year')">X</span>
+        </div>
+        <div class="filter-item" *ngIf="activeFilters.document">
+          {{activeFilters.document}}
+          <span class="close-icon" (click)="filters.clearFilters('document')">X</span>
+        </div>
       </div>
     </div>
-    <div class="d-flex">
-      <div class="link" (click)="filters.clearFilters()">Clear All</div>
-      <div class="link" (click)="openSaveFilterModal(saveFilterModal)">Save Filter</div>
+    <div class="filters-actions" [ngClass]="{active: hasActiveDr}">
+      <i class="fa fa-ellipsis-v" (click)="hasActiveDr=!hasActiveDr"></i>
+      <div class="backdrop" (click)="hasActiveDr=false"></div>
+      <div>
+        <div class="link" (click)="filters.clearFilters();hasActiveDr=false">Clear All</div>
+        <div class="link" (click)="openSaveFilterModal(saveFilterModal);hasActiveDr=false">Save Filter</div>
+      </div>
     </div>
   </div>
 </ng-template>

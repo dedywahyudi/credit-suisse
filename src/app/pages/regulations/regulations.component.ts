@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
 
 import { ApiService } from '../../services/api.service';
+import { SidepanelComponent } from '../../components/sidepanel/sidepanel.component';
 
 // The tabs to be rendered
 const tabs = [
@@ -22,6 +23,7 @@ const tabs = [
   styleUrls: ['./regulations.component.scss']
 })
 export class RegulationsPageComponent implements OnInit {
+  @ViewChild('sidePanel') sidePanel: SidepanelComponent;
   public tabs = [...tabs];
 
   public organizations: any = [];
@@ -52,5 +54,11 @@ export class RegulationsPageComponent implements OnInit {
 
     this.tabsData = this.api.getRegulationData(regulation).share();
     window.scrollTo(0, 0);
+  }
+
+  toggleSidebar() {
+    if (window.innerWidth < 767) {
+      this.sidePanel.toggle();
+    }
   }
 }

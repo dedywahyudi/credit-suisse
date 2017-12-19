@@ -233,3 +233,63 @@
   }
 }
 
+@media (max-width: $t-max-width) {
+  .zoom-slider {
+    height: auto;
+    margin-left: 15px;
+    margin-top: 15px;
+    &:before {
+      height: 80%;
+    }
+    // hide zoom slider on mobile
+    input {
+      display: none;
+    }
+  }
+
+  // change zoom buttons size
+  .zoom-inc,
+  .zoom-dec {
+    width: 32px;
+    height: 32px;
+  }
+  .zoom-inc {
+    margin-bottom: 8px;
+  }
+  .zoom-dec {
+    margin-top: 0px;
+  }
+
+  // map info window styling
+  /deep/ .marker-infowindow {
+    width: 200px;
+  }
+
+  // info window item element
+  .iw-item {
+    padding: 10px 15px;
+    font-size: 8.5px;
+    .img-wrapper {
+      width: 22px;
+      height: 22px;
+      margin-right: 5px;
+    }
+
+    .name {
+      font-size: 10px;
+    }
+    .fa {
+      font-size: 8px;
+    }
+  }
+
+  // info window title element
+  .iw-title {
+    .fa {
+      font-size: 13px;
+    }
+  }
+  /deep/ .cluster {
+    transform: scale(0.8);
+  }
+}

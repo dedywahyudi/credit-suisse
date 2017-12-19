@@ -1,7 +1,12 @@
-<div class="side-panel" [class.hidden]="isHidden" [ngClass]="{collapsible: isCollapsible}">
+<div class="side-panel" [class.hidden]="isHidden" [class.reversed]="reversed" [ngClass]="{collapsible: isCollapsible}">
   <!-- toggle btn -->
-  <div class="toggle-btn" (click)="toggle()" *ngIf="isCollapsible">
+  <div class="toggle-btn" (click)="toggle()">
     <i class="fa fa-angle-left"></i>
   </div>
-  <ng-content></ng-content>
+
+  <div class="content">
+    <div class="content-inner">
+      <ng-content></ng-content>
+    </div>
+  </div>
 </div>

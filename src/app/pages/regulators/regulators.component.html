@@ -1,12 +1,12 @@
 <app-page-layout pageTitle="Regulators">
   <!-- sidebar, regulators list -->
-  <app-sidepanel>
+  <app-sidepanel collapsible #sidePanel="collapsible">
     <ul class="list country-list">
       <li *ngFor="let c of regByCountry">
         <h3 class="country-title" *ngIf="c.country!=='_'">{{c.country}}</h3>
         <ul class="list regulators-list">
           <ng-container *ngFor="let reg of c.regulators">
-            <li class="reg-item" (click)="select(reg)" [ngClass]="{active: selected===reg}">
+            <li class="reg-item" (click)="select(reg);toggleSidebar()" [ngClass]="{active: selected===reg}">
               <div class="reg-logo">
                 <img [attr.src]="reg.logo" alt="" />
               </div>

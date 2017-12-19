@@ -35,3 +35,43 @@
     margin-left: 20px;
   }
 }
+
+@media (max-width: $t-max-width) {
+  .modal-body {
+    width: 450px;
+    padding: 22px 32px;
+    h3 {
+      font-size: 17px;
+    }
+    .filters {
+      margin: 22px 0 16px;
+    }
+    .filter-item {
+      font-size: 9px;
+      padding: 5px 13px;
+    }
+    .btn {
+      min-width: 73px;
+      font-size: 9px;
+    }
+    .btn + .btn {
+      margin-left: 12px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .modal-body {
+    width: 355px;
+    width: calc(100vw - 20px);
+    padding: 22px;
+
+    .filters {
+      margin-top: 12px;
+    }
+
+    .filter-item {
+      margin-top: 10px;
+    }
+  }
+}

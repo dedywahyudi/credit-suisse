@@ -4,10 +4,12 @@ import { mapStyles } from './map-styles';
 
 declare const google: any;
 
+const winWidth = window.innerWidth;
+
 // map configs
 export const mapConfig = {
   center: { lat: 0, lng: 0 },
-  zoom: 2,
+  zoom: winWidth < 768 ? 1 : 2,
   minZoom: 1,
   maxZoom: 6,
   mapTypeControl: false,
@@ -43,14 +45,19 @@ export const getPoint = (map, coords) => {
  */
 export const getMarkerIcon = (active = false) => {
   const color = active === true ? '#970e2b' : '#1f6cae';
+  let size = { strokeWeight: 2, scale: 6 };
+
+  if (winWidth <= 1366) {
+    size = { ...size, strokeWeight: 1, scale: 5 };
+  }
 
   return {
     path: google.maps.SymbolPath.CIRCLE,
     fillColor: color,
     fillOpacity: 1,
     strokeColor: '#ffffff',
-    strokeWeight : 2,
-    scale: 6,
+    strokeWeight : size.strokeWeight,
+    scale: size.scale,
     optimized: false
   };
 };

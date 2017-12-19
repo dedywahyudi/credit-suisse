@@ -2,16 +2,17 @@
   <div id="dashboard-content-inner" class="content-inner">
     <!-- top row, map & regulations -->
     <div class="row sortable-row" [appSortable]="{handle: '.drag-handler'}">
-      <div class="col-4">
+      <ng-container *ngTemplateOutlet="mapsCol; context: {type: 'mobile'}"></ng-container>
+      <div class="col-lg-4 col-md-10">
         <app-content-panel allowSearch minimizable [searchEntries]="organizations">
           <span p-title>
             <i class="fa fa-book"></i>REGULATIONS &amp; STANDARDS
             <span class="drag-handler" appTitle="Drag & drop feature"></span>
           </span>
           <div content class="row organizations">
-            <div class="col-5" *ngFor="let i of [0,1]">
+            <div class="col-5 col-md col-lg-5" *ngFor="let org of organizations">
               <ul class="org-list">
-                <li *ngFor="let org of getOrganizationCol(i)">
+                <li>
                   <h3 class="org-title">
                     <span class="org-logo">
                       <img [attr.src]="org.logo" [attr.alt]="org.name" />
@@ -31,14 +32,12 @@
           </div>
         </app-content-panel>
       </div>
-      <div class="col-6">
-        <ng-container *ngTemplateOutlet="mapsPanel; context: {toggled: false, toggleFullscreen: toggleModal}"></ng-container>
-      </div>
+      <ng-container *ngTemplateOutlet="mapsCol"></ng-container>
     </div>
 
     <!-- bottom row -->
     <div class="row sortable-row" [appSortable]="{handle: '.drag-handler'}">
-      <div class="col-4">
+      <div class="col-lg-4 col-md-5">
         <!-- upcoming events panel -->
         <app-content-panel minimizable>
           <span p-title>
@@ -59,7 +58,7 @@
         </app-content-panel>
       </div>
 
-      <div class="col-6">
+      <div class="col-lg-6 col-md-5">
         <!-- saved documents panel -->
         <app-content-panel minimizable>
           <span p-title>
@@ -96,4 +95,12 @@
 <!-- the maps modal -->
 <ng-template #mapsModal let-close="close">
   <ng-container *ngTemplateOutlet="mapsPanel; context: {toggled: true, toggleFullscreen: close}"></ng-container>
+</ng-template>
+
+
+<!-- maps col -->
+<ng-template #mapsCol let-type="type">
+  <div class="col-lg-6 col-md-10 maps-col {{type || ''}}">
+    <ng-container *ngTemplateOutlet="mapsPanel; context: {toggled: false, toggleFullscreen: toggleModal}"></ng-container>
+  </div>
 </ng-template>

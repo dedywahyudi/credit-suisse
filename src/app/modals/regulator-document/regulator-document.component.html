@@ -4,11 +4,11 @@
     <i class="fa fa-close"></i>
   </button>
   <!-- title, doc icon and tags -->
-  <div class="d-flex align-items-center">
+  <div class="title-row d-flex align-items-center">
     <span class="icon">
       <img [attr.src]="'/assets/img/'+data.type+'-doc-icon.png'" alt="" />
     </span>
-    <div>
+    <div class="title-col">
       <div class="title">{{data.title}}</div>
       <app-tags-list [tags]="data.tags"></app-tags-list>
     </div>

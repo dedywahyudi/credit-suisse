@@ -76,3 +76,59 @@
   line-height: 16px;
   color: $panel-action-color;
 }
+
+
+@media (max-width: $t-max-width) {
+  .wrap {
+    padding: 15px 15px 0;
+  }
+  .icon {
+    width: 28px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  // styles for doc details
+  .details {
+    .title {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+    .details-link {
+      font-size: 10.5px;
+    }
+    .date {
+      font-size: 10.5px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .icon {
+    width: 25px;
+    height: 30px;
+  }
+
+  // styles for doc details
+  .details {
+    width: calc(100% - 40px);
+    .title {
+      font-size: 12px;
+      line-height: 15px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 97%;
+    }
+
+    .details-link {
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 12px;
+    }
+  }
+}

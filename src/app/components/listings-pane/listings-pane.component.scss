@@ -62,7 +62,7 @@
 
   .title {
     color: $body-color;
-    font-weight: 600;
+    font-weight: bold;
   }
 
   a:not(.link) {
@@ -71,5 +71,51 @@
 
   .link {
     font-weight: normal;
+  }
+}
+
+
+@media (max-width: $t-max-width) {
+  .wrapper {
+    padding: 0 21px;
+    margin: 0 -21px;
+    // section title
+    h3 {
+      font-size: 14px;
+      height: 66px;
+      border-bottom: none;
+    }
+  }
+
+  .item {
+    height: 66px;
+  }
+
+  // item img
+  .item-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .details {
+    font-size: 10.5px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .wrapper {
+    margin: 0 -11px;
+    padding-bottom: 30px;
+    // section title
+    h3 {
+      font-size: 12px;
+      height: 50px;
+    }
+  }
+
+  .item {
+    height: 62px;
   }
 }

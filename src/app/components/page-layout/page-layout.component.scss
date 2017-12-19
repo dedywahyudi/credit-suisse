@@ -16,7 +16,7 @@ aside {
 }
 
 .main {
-  width: 100%;
+  width: calc(100% - 48px);
   margin-left: 64px;
   flex: 1 1 auto;
 }
@@ -26,7 +26,6 @@ app-page-header {
   position: fixed;
   z-index: 9;
   width: calc(100% - 64px);
-  min-width: calc(1366px - 64px);
 
   + .page-content {
     margin-top: 64px;
@@ -41,4 +40,53 @@ app-page-header {
 .content-wrapper {
   min-height: 100vh;
   min-height: calc(100vh - 128px);
+}
+
+@media (max-width: $t-max-width) {
+  // page sidebar
+  aside {
+    width: 48px;
+  }
+
+  .main {
+    margin-left: 48px;
+  }
+
+  app-page-header {
+    width: calc(100% - 48px);
+  }
+
+  app-page-header + .page-content {
+    margin-top: 48px;
+    min-height: calc(100% - 48px);
+  }
+
+  .content-wrapper {
+    min-height: calc(100vh - 96px);
+  }
+}
+
+@media (max-width: $m-max-width) {
+  // hide sidebar menu on mobile
+  aside:not(.toggled) {
+    height: 48px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  app-page-header {
+    width: 100%;
+  }
+
+  /deep/ app-page-header + .page-content {
+    margin-top: 48px;
+    min-height: calc(100vh - 48px);
+  }
+
+  .content-wrapper {
+    position: relative;
+    min-height: calc(100vh - 200px);
+  }
 }

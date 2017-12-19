@@ -49,14 +49,6 @@ export class DashboardPageComponent implements OnInit {
   }
 
   /**
-   * getOrganizationCol Get elements for the passed column
-   * @param {number} col
-   */
-  getOrganizationCol(col: number) {
-    return this.organizations.filter((el, i) => i % 2 === col);
-  }
-
-  /**
    * toggleModal Toggle the maps modal
    */
   toggleModal = () => {

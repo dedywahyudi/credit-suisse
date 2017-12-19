@@ -82,3 +82,71 @@
   line-height: 16px;
   color: $panel-action-color;
 }
+
+@media (max-width: $t-max-width) {
+  .wrap {
+    padding: 15px 15px 0;
+  }
+
+  // date icon for the event
+  .date {
+    width: 32px;
+    height: 40px;
+    margin-right: 15px;
+    .day {
+      font-size: 13.5px;
+      line-height: 16px;
+      margin-bottom: 6px;
+    }
+    .month {
+      font-size: 9px;
+    }
+  }
+
+  // event details stylings
+  .details {
+    padding-top: 3px;
+    .title {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .details-link {
+      font-size: 10.5px;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  .wrap {
+    padding-right: 30px;
+  }
+
+  // date icon for the event
+  .date {
+    width: 36px;
+    height: 45px;
+    .day {
+      font-size: 15px;
+    }
+    .month {
+      font-size: 10px;
+    }
+  }
+
+  // event details stylings
+  .details {
+    width: calc(100% - 50px);
+    .title {
+      font-size: 12px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .details-link {
+      font-size: 12px;
+    }
+  }
+}

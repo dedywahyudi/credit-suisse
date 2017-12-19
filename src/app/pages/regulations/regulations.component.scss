@@ -11,7 +11,7 @@ app-page-layout {
 // sidebar styling
 app-sidepanel {
   /deep/ {
-    .side-panel {
+    .side-panel .content .content-inner {
       padding: 20px 0;
     }
   }
@@ -45,6 +45,11 @@ app-sidepanel {
   height: 32px;
   border-radius: 50%;
   background: white;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .reg-item {
@@ -95,7 +100,7 @@ app-sidepanel {
 
   &.active {
     background: $body-bg;
-    border-right: 2px solid $reg-active-border-color;
+    border-right-color: $reg-active-border-color;
   }
 }
 
@@ -104,6 +109,8 @@ app-sidepanel {
   width: 100%;
   display: flex;
   flex-direction: column;
+  // force auto-resize on smaller screens
+  overflow: hidden;
 }
 
 .banner {
@@ -159,6 +166,9 @@ app-page-tabs {
   /deep/ {
     .nav-tabs .nav-item {
       margin-right: 31px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -173,5 +183,128 @@ app-page-tabs {
   .fa {
     color: $panel-action-color;
     margin-right: 19px;
+  }
+}
+
+// sidebar isn't togglable on desktop
+@media (min-width: $t-max-width) {
+  app-sidepanel {
+    /deep/ {
+      .side-panel.collapsible {
+        width: 277px;
+
+        .content {
+          display: block;
+        }
+
+        .toggle-btn {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $t-max-width) {
+  // sidebar styling
+  app-sidepanel {
+    /deep/ {
+      .side-panel {
+        &.collapsible .toggle-btn {
+          top: 15px;
+        }
+
+        .content .content-inner {
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+
+  .org-title {
+    font-size: 10.5px;
+    line-height: 10.5px;
+    margin: 10px 0 5px 18px;
+  }
+
+  .org-logo {
+    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .reg-item {
+    min-height: 30px;
+    padding: 7px 20px;
+    line-height: 16px;
+    font-size: 10.5px;
+    border-right-width: 1px;
+    &:before {
+      width: 4px;
+      height: 4px;
+      margin: 5px 9px 0 10px;
+    }
+  }
+
+  .banner {
+    height: 110px;
+    padding: 20px;
+
+    h3 {
+      font-size: 16.5px;
+      line-height: 16.5px;
+      margin: 0px;
+    }
+
+    sub {
+      font-size: 10.5px;
+      line-height: 10.5px;
+      margin-bottom: auto;
+    }
+  }
+
+  .sort-link {
+    font-size: 10.5px;
+    .fa {
+      margin-right: 0px;
+    }
+  }
+
+  // make page tabs take full height
+  app-page-tabs {
+    /deep/ {
+      .nav-tabs {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+
+        .nav-item {
+          margin-right: 31px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // customize the sort dropdown
+  .sort-wrapper {
+    font-size: 10.5px;
+    margin-left: 0;
+    .fa {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: $m-max-width) {
+  app-sidepanel {
+    /deep/ {
+      .side-panel.collapsible {
+        .content .content-inner {
+          padding-right: 20px;
+        }
+      }
+    }
   }
 }

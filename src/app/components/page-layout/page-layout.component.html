@@ -1,8 +1,8 @@
 <!-- component for common page structure -->
 <div class="wrapper">
   <!-- sidebar nav holder -->
-  <aside>
-    <app-side-nav [notifications]="notifications|async"></app-side-nav>
+  <aside [class.toggled]="sideNav.toggled">
+    <app-side-nav [notifications]="notifications|async" #sideNav="sideNav"></app-side-nav>
   </aside>
 
   <div class="main">
