@@ -1,0 +1,24 @@
+<!-- component for common page structure -->
+<div class="wrapper">
+  <!-- sidebar nav holder -->
+  <aside>
+    <app-side-nav [notifications]="notifications|async"></app-side-nav>
+  </aside>
+
+  <div class="main">
+    <app-page-header
+      [user]="user"
+      [pageTitle]="pageTitle"
+      [messages]="messages|async"
+      [notifications]="notifications|async"
+    ></app-page-header>
+
+    <div class="page-content">
+      <div class="content-wrapper">
+        <!-- page content -->
+        <ng-content></ng-content>
+      </div>
+      <app-page-footer></app-page-footer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="wrap" [attr.expanded]="toggled ? true : null">
+  <!-- toggle sidebar -->
+  <div class="nav-header">
+    <a class="nav-item" href="javascript:;">
+      <i class="icon fa" [ngClass]="!toggled ? 'fa-bars' : 'fa-arrow-left'" (click)="toggle()"></i>
+      Navigation
+    </a>
+  </div>
+
+  <!-- sidebar navidation -->
+  <nav>
+    <ul>
+      <li>
+        <a class="nav-item nav-url" [routerLink]="['/dashboard']" routerLinkActive="active">
+          <i class="icon fa fa-home"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" [routerLink]="['/search']" routerLinkActive="active">
+          <i class="icon fa fa-search"></i>
+          Search
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" [routerLink]="['/regulators']" routerLinkActive="active">
+          <i class="icon fa fa-bank"></i>
+          Regulators
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" [routerLink]="['/regulations']" routerLinkActive="active">
+          <i class="icon fa fa-book"></i>
+          Regulations &amp; Standards
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" href="javascript:;">
+          <i class="icon fa fa-users"></i>
+          Community
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" href="javascript:;">
+          <i class="icon fa fa-comments-o"></i>
+          FAQs &amp; Help
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" [routerLink]="['/notifications']" routerLinkActive="active">
+          <i class="icon fa fa-bell-o"></i>
+          Notifications
+          <span class="spacer"></span>
+          <i class="badge" *ngIf="getNotifications()">{{getNotifications()}}</i>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item nav-url" href="javascript:;">
+          <i class="icon fa fa-cog"></i>
+          Admin
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

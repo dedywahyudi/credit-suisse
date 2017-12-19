@@ -1,0 +1,54 @@
+<div class="modal-body">
+  <!-- close btn -->
+  <button class="btn btn-light btn-close" (click)="close()">
+    <i class="fa fa-close"></i>
+  </button>
+  <!-- title, doc icon and tags -->
+  <div class="d-flex align-items-center">
+    <span class="icon">
+      <img [attr.src]="'/assets/img/'+data.type+'-doc-icon.png'" alt="" />
+    </span>
+    <div>
+      <div class="title">{{data.title}}</div>
+      <app-tags-list [tags]="data.tags"></app-tags-list>
+    </div>
+  </div>
+  <!-- doc date -->
+  <div class="date">
+    <span>Last update: {{data.timestamp|date:'MMMM d, y \'at\' h:mm a'}}</span>
+    <button class="btn" [ngClass]="data.toggled ? 'btn-primary' : 'btn-light'" (click)="data.toggled=!data.toggled"><i class="fa fa-bookmark"></i> Save</button>
+  </div>
+  <!-- doc details -->
+  <div class="info">
+    <div class="info-row">
+      <div class="label">ID</div>
+      <div>{{data.id}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">CCRO Rostin</div>
+      <div>{{data.ccro}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Regulation Title</div>
+      <div>{{data.regulationTitle}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Regulator</div>
+      <div>{{data.regulator}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Country</div>
+      <div>{{data.country}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Overview</div>
+      <div>{{data.overview}}</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Description</div>
+      <div>{{data.description}}</div>
+    </div>
+  </div>
+  <button class="btn btn-primary">Community</button>
+</div>
+

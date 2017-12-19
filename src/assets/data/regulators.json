@@ -1,0 +1,83 @@
+[
+  {
+    "id": "cab9c5cf-4560-437a-a3c8-1fbd6889fa48",
+    "name": "EBA",
+    "logo": "/assets/img/regulators/eba.png",
+    "banner": "/assets/img/regulator-banner.png",
+    "locations": [],
+    "link": "https://www.eba.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "IASB",
+    "logo": "/assets/img/regulators/iasb.png",
+    "banner": "/assets/img/regulator-banner.png",
+    "locations": [],
+    "link": "https://www.iasb.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "APRA",
+    "logo": "/assets/img/regulators/apra.png",
+    "country": "Australia",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.apra.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "SFC",
+    "logo": "/assets/img/regulators/sfc.png",
+    "country": "Hong Kong",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.sfc.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "MAS",
+    "logo": "/assets/img/regulators/mas.png",
+    "country": "Singapore",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.mas.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "BOK",
+    "logo": "/assets/img/regulators/bok.png",
+    "country": "South Korea",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.bok.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "FINMA",
+    "logo": "/assets/img/regulators/finma.png",
+    "logoWhite": "/assets/img/regulators/finma-w.png",
+    "country": "Switzerland",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.finma.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "PRA",
+    "logo": "/assets/img/regulators/pra.png",
+    "country": "United Kingdom",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.pra.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "FASB",
+    "logo": "/assets/img/regulators/fasb.png",
+    "country": "United States",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.fasb.org"
+  },
+  {
+    "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+    "name": "FED",
+    "logo": "/assets/img/regulators/fed.png",
+    "country": "United States",
+    "banner": "/assets/img/regulator-banner.png",
+    "link": "https://www.fed.org"
+  }
+]

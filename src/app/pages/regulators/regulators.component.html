@@ -1,0 +1,52 @@
+<app-page-layout pageTitle="Regulators">
+  <!-- sidebar, regulators list -->
+  <app-sidepanel>
+    <ul class="list country-list">
+      <li *ngFor="let c of regByCountry">
+        <h3 class="country-title" *ngIf="c.country!=='_'">{{c.country}}</h3>
+        <ul class="list regulators-list">
+          <ng-container *ngFor="let reg of c.regulators">
+            <li class="reg-item" (click)="select(reg)" [ngClass]="{active: selected===reg}">
+              <div class="reg-logo">
+                <img [attr.src]="reg.logo" alt="" />
+              </div>
+              {{reg.name}}
+            </li>
+          </ng-container>
+        </ul>
+      </li>
+    </ul>
+  </app-sidepanel>
+
+  <!-- main content area -->
+  <div class="content">
+    <!-- regulator banner -->
+    <div class="banner" [style.backgroundImage]="selected.banner ? 'url('+selected.banner+')' : ''">
+      <h3>
+        <!-- use the white logo if exists, fallback to the default one -->
+        <img [attr.src]="selected.logoWhite||selected.logo" alt="" />
+        <span>{{selected.name}}</span>
+      </h3>
+      <sub>{{selected.country}}</sub>
+    </div>
+
+    <!-- render regulator tabs -->
+    <app-page-tabs [tabNames]="tabs" [tabsData]="tabsData|async">
+      <!-- tabs actions -->
+      <div t-actions>
+        <!-- sort dropdown -->
+        <div class="sort-wrapper">
+          <i class="fa fa-search"></i>Sort by:
+
+          <div ngbDropdown placement="bottom-right" class="d-inline-block">
+            <div ngbDropdownToggle>{{sortBy}}</div>
+            <div ngbDropdownMenu>
+              <div class="dropdown-item" (click)="sortBy='recent'">recent</div>
+              <div class="dropdown-item" (click)="sortBy='name'">name</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-page-tabs>
+  </div>
+</app-page-layout>

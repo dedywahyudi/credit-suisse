@@ -1,0 +1,126 @@
+<app-page-layout pageTitle="Profile">
+  <!-- page sidebar -->
+  <app-sidepanel>
+    <div class="user-wrap">
+      <div class="avatar">
+        <img [attr.src]="user.avatar" alt=""/>
+      </div>
+
+      <!-- user detauks -->
+      <div class="user-info">
+        <h3>{{user.fullname}}</h3>
+        <a [attr.href]="'mailto:'+user.email">{{user.email}}</a>
+      </div>
+
+      <!-- profile actions -->
+      <div class="btns-wrap">
+        <a href="javascript:;" class="btn btn-primary">Update Profile</a>
+        <a href="javascript:;" class="btn btn-primary">Change Password</a>
+      </div>
+    </div>
+  </app-sidepanel>
+  <!-- main content area -->
+  <div class="content-inner">
+      <app-content-panel>
+        <span p-title>
+          <i class="fa fa-home"></i>DASHBOARD SETTINGS
+        </span>
+        <!-- dashboard settings list -->
+        <div content>
+          <!-- call the sortable directive, specify the handler for dragged elements -->
+          <ul class="settings-list" [appSortable]="{handle: '.drag-handler'}">
+            <li class="settings-item" [ngClass]="{active: dashboard.regulationsStandards}">
+              <i class="ic fa fa-book"></i>
+              <div class="details">
+                <span class="settings-title">Regulations &amp; Standards</span>
+                <span class="flex-center">
+                  <app-toggle-input name="regulationsStandards" [(ngModel)]="dashboard.regulationsStandards" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: dashboard.globalRegulators}">
+              <i class="ic fa fa-globe"></i>
+              <div class="details">
+                <span class="settings-title">Global Regulators</span>
+                <span class="flex-center">
+                  <app-toggle-input name="globalRegulators" [(ngModel)]="dashboard.globalRegulators" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: dashboard.upcomingEvents}">
+              <i class="ic fa fa-calendar"></i>
+              <div class="details">
+                <span class="settings-title">Upcoming Events</span>
+                <span class="flex-center">
+                  <app-toggle-input name="upcomingEvents" [(ngModel)]="dashboard.upcomingEvents" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: dashboard.bookmarkedItems}">
+              <i class="ic fa fa-bookmark-o"></i>
+              <div class="details">
+                <span class="settings-title">Bookmarked Items</span>
+                <span class="flex-center">
+                  <app-toggle-input name="bookmarkedItems" [(ngModel)]="dashboard.bookmarkedItems" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: dashboard.savedSearches}">
+              <i class="ic fa fa-search"></i>
+              <div class="details">
+                <span class="settings-title">Saved Searches</span>
+                <span class="flex-center">
+                  <app-toggle-input name="savedSearches" [(ngModel)]="dashboard.savedSearches" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: dashboard.recentlyViewed}">
+              <i class="fa ic fa-file-o"></i>
+              <div class="details">
+                <span class="settings-title">Recently Viewed Items</span>
+                <span class="flex-center">
+                  <app-toggle-input name="recentlyViewed" [(ngModel)]="dashboard.recentlyViewed" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th"></i>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </app-content-panel>
+      <app-content-panel>
+        <span p-title>
+          <i class="fa fa-bell"></i>NOTIFICATION SETTINGS
+        </span>
+        <!-- notifications settings list -->
+        <div content>
+          <ul class="settings-list">
+            <li class="settings-item" [ngClass]="{active: notifications.website}">
+              <i class="ic fa fa-bell"></i>
+              <div class="details">
+                <span class="settings-title">Website Notifications</span>
+                <span class="flex-center">
+                  <app-toggle-input name="website" [(ngModel)]="notifications.website" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th disabled"></i>
+                </span>
+              </div>
+            </li>
+            <li class="settings-item" [ngClass]="{active: notifications.messages}">
+              <i class="ic fa fa-comments"></i>
+              <div class="details">
+                <span class="settings-title">Message Notifications</span>
+                <span class="flex-center">
+                  <app-toggle-input name="messages" [(ngModel)]="notifications.messages" ngDefaultControl></app-toggle-input>
+                  <i class="drag-handler fa fa-th disabled"></i>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </app-content-panel>
+  </div>
+</app-page-layout>

@@ -1,0 +1,55 @@
+@import 'variables';
+
+.content {
+  height: 100%;
+
+  padding: 0 43px;
+  margin: 0 -43px;
+  background: $panel-bg-color;
+
+  display: flex;
+  flex-direction: column;
+}
+
+// customize the glossary header
+.headline {
+  color: $primary;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  border-bottom: 1px solid $border-color;
+
+  flex: 0 0 auto;
+
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+// customize the nav
+.nav-pills {
+  margin: 0;
+  .nav-link {
+    color: $body-color;
+    background: $light;
+    font-size: 12px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    &.active {
+      background: $body-bg;
+      font-weight: bold;
+    }
+  }
+}
+
+// take full height
+app-article-viewer {
+  height: 100%;
+}

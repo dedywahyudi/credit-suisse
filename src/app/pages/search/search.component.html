@@ -1,0 +1,103 @@
+<!-- the main page layout -->
+<app-page-layout pageTitle="Search" [class.collapsed-layout]="collapsed">
+  <!-- filters sidebar -->
+  <!-- collapsed by default if in quicksearch mode -->
+  <app-sidepanel collapsible [isHidden]="isQuickSearch" (onToggle)="collapsed = $event">
+    <app-search-filters
+      #filters="filters"
+      [savedFilters]="savedFilters"
+      (onApply)="search($event)"
+    ></app-search-filters>
+  </app-sidepanel>
+
+  <!-- the search results section -->
+  <div class="search-results">
+    <!-- render the quicksearch view if there's a query entry -->
+    <!-- renders the tabbed results otherwise (documents/milestones) -->
+    <ng-container *ngIf="isQuickSearch; else tabsResults">
+      <!-- quicksearch view results -->
+
+      <!-- the search input -->
+      <div class="d-flex align-items-center">
+        <app-quick-search-input [query]="searchQuery"></app-quick-search-input>
+      </div>
+
+      <!-- wait for results and render them -->
+      <ng-container *ngIf="tabsData|async as data">
+        <div class="filters-header d-flex justify-content-between align-items-center query-search">
+          <div class="d-flex align-items-center">
+            <!-- if there's a query, count the results and show the counting -->
+            <strong *ngIf="searchQuery">
+              {{data.documents.length}} Items found by "{{searchQuery}}"
+            </strong>
+          </div>
+          <div class="d-flex">
+            <a class="link" href="javascript:;">
+              <i class="fa fa-search"></i>Advanced Search
+            </a>
+          </div>
+        </div>
+
+        <!-- documents grid/results -->
+        <app-cards-grid [tmpl]="doc" [items]="data.documents"></app-cards-grid>
+      </ng-container>
+    </ng-container>
+  </div>
+</app-page-layout>
+
+<!-- tabbed results view (Documents, Milestones) -->
+<ng-template #tabsResults>
+  <app-page-tabs [tabNames]="['Documents', 'Milestones']" [tabsData]="(tabsData|async)">
+    <div t-actions>
+      <a class="link" href="javascript:;">
+        <i class="fa fa-search"></i>Quick Search
+      </a>
+    </div>
+    <ng-container t-inBetween *ngTemplateOutlet="activeFiltersRow"></ng-container>
+  </app-page-tabs>
+</ng-template>
+
+<!-- Template for the active filters, allow user to remove them  -->
+<ng-template #activeFiltersRow>
+  <div class="filters-header d-flex justify-content-between align-items-center" *ngIf="hasActiveFilters()">
+    <div class="d-flex align-items-center">
+      <strong>{{resultsCount|async}} Items found by:</strong>
+      <div class="filter-item" *ngIf="activeFilters.regulator">
+        {{activeFilters.regulator}}
+        <span class="close-icon" (click)="filters.clearFilters('regulator')">X</span>
+      </div>
+      <div class="filter-item" *ngIf="activeFilters.regulation">
+        {{activeFilters.regulation}}
+        <span class="close-icon" (click)="filters.clearFilters('regulation')">X</span>
+      </div>
+      <div class="filter-item" *ngIf="activeFilters.year">
+        {{activeFilters.year}}
+        <span class="close-icon" (click)="filters.clearFilters('year')">X</span>
+      </div>
+      <div class="filter-item" *ngIf="activeFilters.document">
+        {{activeFilters.document}}
+        <span class="close-icon" (click)="filters.clearFilters('document')">X</span>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="link" (click)="filters.clearFilters()">Clear All</div>
+      <div class="link" (click)="openSaveFilterModal(saveFilterModal)">Save Filter</div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Document template, needed when in quicksearch mode -->
+<ng-template #doc let-doc="item">
+  <app-document-card [data]="doc">
+    <i class="fa fa-bookmark"
+      actions
+      [class.toggled]="doc.toggled"
+      (click)="doc.toggled=!doc.toggled
+    "></i>
+  </app-document-card>
+</ng-template>
+
+<!-- the "save search" modal -->
+<ng-template #saveFilterModal let-close="close">
+  <app-save-filter [filters]="modalFilters" [close]="close" [save]="saveFilter"></app-save-filter>
+</ng-template>

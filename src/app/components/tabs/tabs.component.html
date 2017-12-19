@@ -1,0 +1,11 @@
+<!-- utility component to wrap bootstrap's nav-tab -->
+<div class="d-flex justify-content-between align-items-center">
+  <ul class="nav nav-tabs" role="tablist">
+    <ng-container *ngFor="let tab of tabs">
+      <li class="nav-item" [class.active]="activeTab===tab" (click)="select(tab)">{{tab}}</li>
+    </ng-container>
+  </ul>
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>

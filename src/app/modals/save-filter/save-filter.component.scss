@@ -1,0 +1,37 @@
+@import 'variables';
+
+// customize the modal's size
+.modal-body {
+  width: 600px;
+  padding: 30px 40px;
+
+  .title {
+    font-weight: 700;
+  }
+
+  .filters {
+    margin: 25px 0 20px;
+  }
+
+  .filter-item {
+    display: inline-block;
+    padding: 7px 15px;
+    background: $light;
+    border-radius: 4px;
+    margin-right: 10px;
+    .close-icon {
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  // space out the modal action buttons
+  .btn {
+    min-width: 96px;
+  }
+
+  .btn + .btn {
+    margin-left: 20px;
+  }
+}

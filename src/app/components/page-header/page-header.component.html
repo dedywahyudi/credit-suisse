@@ -1,0 +1,46 @@
+<nav class="navbar navbar-light justify-content-between">
+  <a class="navbar-brand">{{pageTitle}}</a>
+
+  <div class="d-flex align-items-center">
+    <app-quick-search-input clear placeholder="Quick Search"></app-quick-search-input>
+
+    <!-- navigation list -->
+    <div class="nav">
+      <a href="javascript:;"><i class="fa fa-cog"></i></a>
+      <a href="javascript:;"><i class="fa fa-thumb-tack"></i></a>
+      <a href="javascript:;">
+        <i class="fa fa-comments-o"></i>
+        <span class="badge badge-danger" *ngIf="getMessages()">
+          {{getMessages()}}
+        </span>
+      </a>
+      <a href="javascript:;">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-danger" *ngIf="getNotifications()">
+          {{getNotifications()}}
+        </span>
+      </a>
+    </div>
+
+    <!-- user details -->
+    <div class="user-wrap d-flex align-items-center" [ngbPopover]="userPop" placement="bottom" #popover="ngbPopover">
+      <div class="avatar">
+        <img [attr.src]="user.avatar" alt=""/>
+      </div>
+
+      <div class="welcome">
+        <div>Welcome</div>
+        <div>
+          <span>{{user.fullname}}</span>
+          <i class="fa fa-caret-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- profile actions popover -->
+<ng-template #userPop>
+  <a [routerLink]="['/profile']"><i class="fa fa-user"></i>My profile</a>
+  <a href="javascript:;"><i class="fa fa-sign-out"></i>Logout</a>
+</ng-template>

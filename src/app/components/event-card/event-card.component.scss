@@ -1,0 +1,84 @@
+@import 'variables';
+
+.wrap {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 20px 21px 0;
+}
+
+// date icon for the event
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 43px;
+  height: 53px;
+
+  background: $ev-date-bg-color;
+  color: $ev-date-color;
+
+  margin-right: 19px;
+
+  .day {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: -6px; //fix placement for line-height
+    margin-bottom: 7px;
+  }
+
+  .month {
+    font-weight: bold;
+    font-size: 10px;
+    bottom: 0;
+    text-transform: uppercase;
+  }
+}
+
+// event details stylings
+.details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 25px;
+
+  .title {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $ev-name-color;
+
+    margin-bottom: 13px;
+    padding-right: 15px;
+  }
+
+  .details-link {
+    line-height: 12px;
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $ev-descr-color;
+  }
+}
+
+// event popup modal trigger
+.ellipsis {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $panel-action-color;
+}

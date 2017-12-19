@@ -1,0 +1,6 @@
+<div ngbDropdown placement="bottom">
+  <div ngbDropdownToggle>{{ngModel || placeholder}}</div>
+  <div ngbDropdownMenu>
+    <div class="dropdown-item" *ngFor="let opt of options" (click)="change(opt)">{{opt}}</div>
+  </div>
+</div>

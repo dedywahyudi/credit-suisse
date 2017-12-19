@@ -1,0 +1,35 @@
+@import 'variables';
+
+.saved-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 22px 20px;
+  font-weight: 600;
+  border-bottom: solid 1px $border-color;
+  // keep icon width
+  .fa {
+    flex-shrink: 1;
+  }
+
+  &:first-child {
+    padding-top: 2px;
+  }
+
+  .saved-item-title {
+    color: $darker;
+    width: 100%;
+  }
+
+  .saved-item-actions {
+    color: $panel-action-color;
+    font-size: 14px;
+  }
+}
+
+:host /deep/ {
+  .nav-link {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+}

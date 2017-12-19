@@ -1,0 +1,82 @@
+@import 'variables';
+
+// set modal width
+.modal-body {
+  width: 680px;
+  padding: 40px;
+  /deep/ .tags {
+    margin: 0;
+  }
+}
+
+// modal close btn
+.btn-close {
+  position: absolute;
+  top:22px;
+  right: 22px;
+  width: 32px;
+  padding: 5px;
+  color: $panel-action-color;
+}
+
+// modal title
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+// doc date
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $panel-action-color;
+  margin-top: 5px;
+  .btn  {
+    padding-left: 15px;
+    padding-right: 15px;
+    .fa {
+      margin-right: 3px;
+      font-size: 14px;
+    }
+  }
+
+  .btn-light {
+    color: $body-color;
+  }
+
+  .btn-light .fa {
+    color: $panel-action-color;
+  }
+}
+
+// doc details
+.info {
+  margin: 25px 0 20px;
+  padding: 15px 20px 25px;
+  background-color: $light;
+  line-height: 24px;
+  color: black;
+}
+// details table row
+.info-row {
+  display: flex;
+  margin-bottom: 5px;
+  .label {
+    position: relative;
+    padding-right: 10px;
+    width: 150px;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .label:after {
+    content: ':';
+    position: absolute;
+    right: 3px;
+  }
+}

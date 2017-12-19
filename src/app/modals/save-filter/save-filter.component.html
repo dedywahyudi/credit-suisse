@@ -1,0 +1,39 @@
+<div class="modal-body">
+  <!-- modal title -->
+  <h3 class="title">Save Search</h3>
+
+  <!-- list the active filters to be saved -->
+  <div class="filters">
+    <div class="filter-item" *ngIf="filters.regulator">
+      {{filters.regulator}}
+      <span class="close-icon" (click)="filters.regulator=''">X</span>
+    </div>
+    <div class="filter-item" *ngIf="filters.regulation">
+      {{filters.regulation}}
+      <span class="close-icon" (click)="filters.regulation=''">X</span>
+    </div>
+    <div class="filter-item" *ngIf="filters.year">
+      {{filters.year}}
+      <span class="close-icon" (click)="filters.year=''">X</span>
+    </div>
+    <div class="filter-item" *ngIf="filters.document">
+      {{filters.document}}
+      <span class="close-icon" (click)="filters.document=''">X</span>
+    </div>
+  </div>
+
+  <!-- let user give a name to the staved filter -->
+  <form (ngSubmit)="save(filterName, filters, close)">
+    <div class="form-group">
+      <input class="form-control iput-border" type="text" placeholder="Title" [(ngModel)]="filterName" name="filter-name">
+    </div>
+
+    <div class="text-right">
+      <button class="btn btn-light" type="reset" (click)="close()">
+        Cancel
+      </button>
+      <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+  </form>
+</div>
+

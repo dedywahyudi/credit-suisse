@@ -1,0 +1,58 @@
+@import 'variables';
+
+// move to top to allow rows to have a margin in between
+.cards-row {
+  margin-top: -18px;
+
+  [class^="col-"] {
+    padding-top: 18px;
+  }
+}
+
+// customize the document and event cards
+.item /deep/ {
+  app-document-card,
+  app-event-card {
+    .wrap {
+      background: white;
+    }
+  }
+
+  app-document-card .ellipsis {
+    top: 2px;
+  }
+
+  app-event-card {
+    .details {
+      position: static;
+    }
+
+    .wrap {
+      position: relative;
+    }
+  }
+
+  .ic-add {
+    background: $light;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    color: $panel-action-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.toggled {
+      background: $primary;
+      color: white;
+    }
+  }
+
+  .fa-bookmark {
+    color: $border-color;
+    &.toggled {
+      color: $primary;
+    }
+  }
+}

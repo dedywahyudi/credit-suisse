@@ -1,0 +1,66 @@
+<div class="tabs-content">
+  <app-tabs [tabs]="tabNames" [(activeTab)]="activeTab">
+    <ng-content select="[t-actions]"></ng-content>
+  </app-tabs>
+
+  <ng-content select="[t-inBetween]"></ng-content>
+
+  <!-- reset the content tabs when tabsData is fetched -->
+  <ng-container *ngFor="let tab of tabNames">
+    <div class="tab-content"  *ngIf="activeTab===tab && tabsData">
+      <div class="tab-pane active">
+        <ng-container *ngTemplateOutlet="getTmplRef(tab); context: tabsData"></ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<!-- documents tab content -->
+<ng-template #Documents let-docs="documents">
+  <ng-template #doc let-doc="item">
+    <app-document-card [data]="doc">
+      <i class="fa fa-bookmark"
+        actions
+        [class.toggled]="doc.toggled"
+        (click)="doc.toggled=!doc.toggled
+      "></i>
+    </app-document-card>
+  </ng-template>
+
+  <app-cards-grid [tmpl]="doc" [items]="docs"></app-cards-grid>
+</ng-template>
+
+<!-- milestones tab content -->
+<ng-template #Milestones let-milestones="milestones">
+  <ng-template #milestone let-milestone="item">
+    <app-event-card [data]="milestone">
+      <i class="fa fa-plus ic-add"
+        actions
+        [class.toggled]="milestone.toggled"
+        (click)="milestone.toggled=!milestone.toggled
+      "></i>
+    </app-event-card>
+  </ng-template>
+
+  <app-cards-grid [tmpl]="milestone" [items]="milestones"></app-cards-grid>
+</ng-template>
+
+<!-- contacts tab content -->
+<ng-template #Contacts let-contacts="contacts">
+  <app-listings-pane listTitle="Contacts" [items]="contacts"></app-listings-pane>
+</ng-template>
+
+<!-- link tab content -->
+<ng-template #Links let-links="links">
+  <app-listings-pane listTitle="Links" [items]="links"></app-listings-pane>
+</ng-template>
+
+<!-- quick guide tab content -->
+<ng-template #QuickGuide let-data="quickGuide">
+  <app-glossary [data]="data" [title]="'Quick Guide'"></app-glossary>
+</ng-template>
+
+<!-- implementation guide tab content -->
+<ng-template #ImplementationGuide let-data="implementationGuide">
+  <app-glossary [data]="data" [title]="'Implementation Guide'"></app-glossary>
+</ng-template>

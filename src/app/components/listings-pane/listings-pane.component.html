@@ -1,0 +1,25 @@
+<!-- listing pane component used to show user a custom list like in regulations/contacts -->
+<div class="wrapper">
+  <!-- list title -->
+  <h3>{{listTitle}}</h3>
+
+  <ul class="items">
+    <li class="item" *ngFor="let item of items">
+      <!-- render avatar if there's any -->
+      <div class="item-img" *ngIf="item.avatar">
+        <img [attr.src]="item.avatar" [attr.alt]="item.fullname" />
+      </div>
+      <div class="details">
+        <!-- list item title -->
+        <div class="title">{{item.title || item.fullname}}</div>
+        <!-- any link or mail if they're provided -->
+        <a [attr.href]="'mailto:'+item.email" *ngIf="item.email">
+          {{item.email}}
+        </a>
+        <a class="link" [attr.href]="item.url" *ngIf="item.url">
+          {{item.url}}
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>

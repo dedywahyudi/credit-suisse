@@ -1,0 +1,28 @@
+<div class="wrap">
+  <!-- document icon -->
+  <span class="icon">
+    <img [attr.src]="'/assets/img/'+data.type+'-doc-icon.png'" alt="" />
+  </span>
+  <!-- document details -->
+  <div class="details">
+    <h5 class="title">{{data.title}}</h5>
+    <!-- list all document tags -->
+    <app-tags-list [tags]="data.tags"></app-tags-list>
+    <p class="description">{{data.shortDescription}}</p>
+
+    <!-- cta for see doc details, open doc modal -->
+    <div class="details-line">
+      <a class="link details-link" href="javascript:;" (click)="openDocumentModal(regulatorDocument)">See Detail</a>
+      <span class="date">{{data.timestamp|date:'MMMM d, y'}}</span>
+    </div>
+
+    <!-- the doc "menu" toggle button -->
+    <a class="ellipsis" href="javascript:;">
+      <ng-content #content select="[actions]"></ng-content>
+    </a>
+  </div>
+</div>
+<!-- template for document details -->
+<ng-template #regulatorDocument let-close="close">
+  <app-regulator-document [data]="data" [close]="close"></app-regulator-document>
+</ng-template>

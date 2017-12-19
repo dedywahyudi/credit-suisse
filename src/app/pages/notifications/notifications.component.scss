@@ -1,0 +1,111 @@
+@import 'variables';
+
+// make the page's content wrappper as flex
+app-page-layout {
+  /deep/ {
+    .content-wrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  margin: 34px 190px 0 175px;
+
+  background: $panel-bg-color;
+  padding: 0 21px 40px;
+}
+
+// remove list style for notifications list
+.notifications {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-wrap {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 20px;
+  color: $body-color;
+  padding: 22px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  // add the "unread" dot
+  &:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    margin-right: 21px;
+    flex: 0 0 auto;
+    border-radius: 100%;
+  }
+
+  // make it blue for the unread messages
+  &.unread:before {
+    background: $primary;
+  }
+
+  .icon {
+    color: white;
+    background: $panel-action-color;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+    margin-right: 22px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .date {
+    color: $panel-action-color;
+    bottom: 0;
+    line-height: inherit;
+    font-size: inherit;
+    flex: 1 0 auto;
+
+    align-self: flex-start;
+    min-width: 120px;
+    margin-left: 15px;
+    text-align: right;
+  }
+}
+
+// icons for each notification type
+.icon {
+  .message:before {
+    content: "\f0e0";
+  }
+
+  .uploads:before{
+    content: "\f0f6";
+  }
+
+  .todos:before{
+    content: "\f0ca";
+  }
+
+  .news:before{
+    content: "\f021";
+  }
+}

@@ -1,0 +1,44 @@
+@import 'variables';
+
+.wrapper {
+  height: 100%;
+  display: flex;
+}
+
+// page sidebar
+aside {
+  width: 64px;
+  height: 100%;
+  flex: 0 0 auto;
+  z-index: 19;
+
+  position: fixed;
+}
+
+.main {
+  width: 100%;
+  margin-left: 64px;
+  flex: 1 1 auto;
+}
+
+// page header
+app-page-header {
+  position: fixed;
+  z-index: 9;
+  width: calc(100% - 64px);
+  min-width: calc(1366px - 64px);
+
+  + .page-content {
+    margin-top: 64px;
+  }
+}
+
+.page-content {
+  min-height: 100%;
+  min-height: calc(100% - 64px);
+}
+
+.content-wrapper {
+  min-height: 100vh;
+  min-height: calc(100vh - 128px);
+}

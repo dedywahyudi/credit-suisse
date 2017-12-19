@@ -1,0 +1,128 @@
+[
+  {
+    "name": "APRA",
+    "logo": "/assets/img/regulations/apra.png",
+    "regulations": [
+      {
+        "id": "cab9c5cf-4560-437a-a3c8-1fbd6889fa48",
+        "name": "ARF 730",
+        "communityLink": "https://community.arf.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "ARF 731",
+        "communityLink": "https://community.arf.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "EFS Moderation",
+        "communityLink": "https://community.efs.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "HK FRR",
+        "communityLink": "https://community.hk.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "MAS 610_1003 Revamp",
+        "communityLink": "https://community.mas.com",
+        "banner": "/assets/img/regulation-banner.png"
+      }
+    ]
+  },
+  {
+    "name": "BCBS",
+    "logo": "/assets/img/regulations/bcbs.png",
+    "regulations": [
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Basel IV-Capital Floor",
+        "communityLink": "https://community.basel.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Basel IV-Securitisation",
+        "communityLink": "https://community.basel.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Basel IV-Standardised Credit Risk",
+        "communityLink": "https://community.basel.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "LER",
+        "communityLink": "https://community.ler.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Leverage Ratio",
+        "communityLink": "https://community.leverage.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "SA-CCR",
+        "communityLink": "https://community.sa.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "TLAC",
+        "communityLink": "https://community.tlac.com",
+        "banner": "/assets/img/regulation-banner.png"
+      }
+    ]
+  },
+  {
+    "name": "FASB/IASB",
+    "logo": "/assets/img/regulations/fasb.png",
+    "regulations": [
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "IFRS 9 Classification & Measurement",
+        "communityLink": "https://community.ifrs.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "IFRS 9 Imparment",
+        "communityLink": "https://community.ifrs.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Leases",
+        "communityLink": "https://community.leases.com",
+        "banner": "/assets/img/regulation-banner.png"
+      },
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "Revenue Recognition",
+        "communityLink": "https://community.revenue.com",
+        "banner": "/assets/img/regulation-banner.png"
+      }
+    ]
+  },
+  {
+    "name": "FED",
+    "logo": "/assets/img/regulations/fed.png",
+    "regulations": [
+      {
+        "id": "f91392ea-2133-44c1-a730-56b3060fe613",
+        "name": "CCAR",
+        "communityLink": "https://community.ccar.com",
+        "banner": "/assets/img/regulation-banner.png"
+      }
+    ]
+  }
+]

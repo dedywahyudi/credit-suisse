@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+// search box wrapper
+.form-inline {
+  position: relative;
+  margin-right: 60px;
+}
+
+// search icon
+.sbm-btn {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 15px;
+
+  font-size: 18px;
+  color: $navbar-action-color;
+}
+
+.form-control {
+  background-color: $body-bg;
+  color: $navbar-action-color;
+  width: 520px;
+  padding-right: 40px;
+
+  @include placeholder {
+    color: $navbar-action-color;
+  }
+}

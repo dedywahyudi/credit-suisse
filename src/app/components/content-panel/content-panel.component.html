@@ -1,0 +1,61 @@
+<article class="wrapper" [ngClass]="{collapsed: collapsed}">
+  <!-- panel header -->
+  <header>
+    <!-- panel title -->
+    <h3>
+      <ng-content select="[p-title]"></ng-content>
+    </h3>
+    <!-- panel right actions -->
+    <div class="panel-actions">
+      <!-- allow one to provide content in the panel's actions -->
+      <ng-content select="[p-actions]"></ng-content>
+      <!-- search functionality -->
+      <a class="action search-action" href="javascript:;" *ngIf="allowSearch!==false" [ngClass]="{active: searchToggled}">
+        <i class="fa fa-search" (click)="toggleSearch(true);searchInput.focus()"></i>
+        <input
+          #searchInput
+          type="search"
+          class="form-control"
+          [(ngModel)]="searchQuery"
+          [ngbTypeahead]="query"
+          [resultTemplate]="rt"
+          [inputFormatter]="inputFormatter"
+          [focusFirst]="false"
+          (selectItem)="onSearchResult($event)"
+        />
+        <i class="fa fa-times close-search" (click)="toggleSearch(false)"></i>
+      </a>
+      <!-- minimize -->
+      <a class="action" href="javascript:;" *ngIf="minimizable!==false" (click)="collapsed=!collapsed">
+        <i class="fa" [ngClass]="collapsed ? 'fa-plus' : 'fa-minus'"></i>
+      </a>
+      <!-- maximize/fullscreen -->
+      <a class="action fscreen" href="javascript:;" *ngIf="allowFullScreen!==false" (click)="toggleFullscreen.emit()">
+        <i class="fa" [ngClass]="isFullscreen ? 'fa-compress' : 'fa-arrows-alt'"></i>
+      </a>
+    </div>
+  </header>
+  <!-- panel content -->
+  <section class="sction-content">
+    <ng-content select="[content]"></ng-content>
+  </section>
+</article>
+
+<!-- template for the results dropdown -->
+<ng-template #rt let-r="result" let-t="term">
+  <!-- render the item logo -->
+  <span class="search-result-logo">
+    <img [src]="r['logo']" alt=""/>
+  </span>
+  <!-- render item details -->
+  <div>
+    <div class="result-title">
+      <!-- show the "matched" text -->
+      <ngb-highlight class="r-title" [result]="r.name" [term]="t"></ngb-highlight>
+      <span *ngIf="r.country">-</span>
+      <ngb-highlight [result]="r.country" [term]="t"></ngb-highlight>
+    </div>
+    <a class="result-link" [attr.href]="r.link" target="_blank">{{r.link|url}}</a>
+  </div>
+  <i class="icon fa fa-chevron-right"></i>
+</ng-template>

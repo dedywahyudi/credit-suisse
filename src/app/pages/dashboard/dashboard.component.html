@@ -1,0 +1,99 @@
+<app-page-layout pageTitle="Dashboard">
+  <div id="dashboard-content-inner" class="content-inner">
+    <!-- top row, map & regulations -->
+    <div class="row sortable-row" [appSortable]="{handle: '.drag-handler'}">
+      <div class="col-4">
+        <app-content-panel allowSearch minimizable [searchEntries]="organizations">
+          <span p-title>
+            <i class="fa fa-book"></i>REGULATIONS &amp; STANDARDS
+            <span class="drag-handler" appTitle="Drag & drop feature"></span>
+          </span>
+          <div content class="row organizations">
+            <div class="col-5" *ngFor="let i of [0,1]">
+              <ul class="org-list">
+                <li *ngFor="let org of getOrganizationCol(i)">
+                  <h3 class="org-title">
+                    <span class="org-logo">
+                      <img [attr.src]="org.logo" [attr.alt]="org.name" />
+                    </span>
+                    <span>{{org.name}}</span>
+                  </h3>
+                  <ul class="regulations-list">
+                    <ng-container *ngFor="let reg of org.regulations">
+                      <li>
+                        {{reg.name}}
+                      </li>
+                    </ng-container>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </app-content-panel>
+      </div>
+      <div class="col-6">
+        <ng-container *ngTemplateOutlet="mapsPanel; context: {toggled: false, toggleFullscreen: toggleModal}"></ng-container>
+      </div>
+    </div>
+
+    <!-- bottom row -->
+    <div class="row sortable-row" [appSortable]="{handle: '.drag-handler'}">
+      <div class="col-4">
+        <!-- upcoming events panel -->
+        <app-content-panel minimizable>
+          <span p-title>
+            <i class="fa fa-calendar"></i>UPCOMING EVENTS ({{upcomingEvents.length}})
+            <span class="drag-handler" appTitle="Drag & drop feature"></span>
+          </span>
+          <a class="see-all-ev-link" href="javascript:;" p-actions>
+            <i class="fa fa-calendar"></i>
+          </a>
+          <div class="card-wrap" content>
+            <!-- upcoming events list -->
+            <ng-container *ngFor="let ev of upcomingEvents">
+              <app-event-card [data]="ev">
+                <i class="fa fa-ellipsis-v" actions></i>
+              </app-event-card>
+            </ng-container>
+          </div>
+        </app-content-panel>
+      </div>
+
+      <div class="col-6">
+        <!-- saved documents panel -->
+        <app-content-panel minimizable>
+          <span p-title>
+            <i class="fa fa-bookmark-o"></i>SAVED DOCUMENTS ({{savedDocuments.count}})
+            <span class="drag-handler" appTitle="Drag & drop feature"></span>
+          </span>
+          <a class="see-all-docs-link" href="javascript:;" p-actions>See All</a>
+          <div class="card-wrap" content>
+            <!-- saved documents list -->
+            <ng-container *ngFor="let doc of savedDocuments.docs">
+              <app-document-card [data]="doc">
+                <i class="fa fa-ellipsis-v" actions></i>
+              </app-document-card>
+            </ng-container>
+          </div>
+        </app-content-panel>
+      </div>
+    </div>
+  </div>
+</app-page-layout>
+
+<!-- the template for the maps panel -->
+<!-- used both on the page, and in the maps modal -->
+<ng-template #mapsPanel let-toggled="toggled" let-toggleFullscreen="toggleFullscreen">
+  <app-content-panel allowSearch [minimizable]="!toggled" allowFullScreen [searchEntries]="regulators" (toggleFullscreen)="toggleFullscreen()" [isFullscreen]="toggled">
+    <span p-title>
+      <i class="fa fa-globe"></i>GLOBAL REGULATORS
+      <span class="drag-handler" appTitle="Drag & drop feature"></span>
+    </span>
+    <app-google-map content [items]="locations"></app-google-map>
+  </app-content-panel>
+</ng-template>
+
+<!-- the maps modal -->
+<ng-template #mapsModal let-close="close">
+  <ng-container *ngTemplateOutlet="mapsPanel; context: {toggled: true, toggleFullscreen: close}"></ng-container>
+</ng-template>

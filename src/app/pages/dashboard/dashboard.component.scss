@@ -1,0 +1,170 @@
+@import 'variables';
+
+.content-inner {
+  padding: 22px 21px;
+  width: 100%;
+  position: relative;
+}
+
+// make content panels take equal heights
+app-content-panel {
+  /deep/ {
+    article:not(.collapsed) {
+      height: 100%;
+    }
+  }
+}
+
+// add margin between rows
+.row + .row {
+  margin-top: $grid-gutter-width;
+}
+
+.sortable-chosen {
+  max-width: none;
+  opacity: 1!important;// the sortable library adds opacity on the element
+  // it is required to use !important in order to override that
+}
+
+// customize the element that is being dragged (the one intance that stays on the page)
+.sortable-chosen.sortable-ghost {
+  /deep/ article {
+    background: $body-bg;
+    * {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &.moved /deep/ article {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: $sortable-ghost-el-border;
+    }
+  }
+}
+
+// make other sortable cols transparent while dragging a sortable item
+.sortable-row [class^="col"]:not(.sortable-chosen) article {
+  /deep/ body.on-sort-dragging & {
+      opacity: .6;
+  }
+}
+
+.drag-handler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  cursor: pointer;
+}
+
+.see-all-docs-link {
+  font-size: 12px;
+  color: $panel-action-color;
+  font-weight: normal;
+}
+
+.see-all-ev-link {
+  color: $panel-action-color;
+  font-weight: normal;
+}
+
+.card-wrap {
+  padding-bottom: 20px;
+}
+
+// hide the card description on dashboard
+app-document-card,
+app-event-card {
+  /deep/ {
+    .details {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $body-bg;
+    }
+
+    .description {
+      display: none;
+    }
+  }
+  &:last-child /deep/ .details {
+    border-bottom: none;
+  }
+}
+
+// make the map modal take ~90% width
+:host {
+  /deep/ {
+    .map-modal-window {
+      .modal-content {
+        width: 88.25%;
+      }
+    }
+  }
+}
+
+// regulations/organizations panel
+.organizations  {
+  padding: 30px;
+}
+
+.org-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  > li {
+    margin-bottom: 35px;
+  }
+}
+
+.regulations-list {
+  list-style: disc;
+  padding-left: 17px;
+  li {
+    margin: 10px 0;
+  }
+}
+
+.org-title {
+  margin-bottom: 12px;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.org-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+// customize search input for small panels
+.col-4 app-content-panel {
+  /deep/ {
+    .search-action {
+      &.active input {
+        width: 165px;
+      }
+
+      ngb-typeahead-window {
+        width: 170px;
+
+        .result-title {
+          width: 98px;
+        }
+      }
+    }
+  }
+}

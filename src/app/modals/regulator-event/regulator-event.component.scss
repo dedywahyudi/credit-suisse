@@ -1,0 +1,58 @@
+@import 'variables';
+
+// set modal size
+.modal-body {
+  width: 680px;
+  padding: 40px;
+  /deep/ .tags {
+    margin: 10px 0 5px;
+  }
+}
+
+// modal close button
+.btn-close {
+  position: absolute;
+  top:22px;
+  right: 22px;
+  width: 32px;
+  padding: 5px;
+  color: $panel-action-color;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.description {
+  margin: 25px 0;
+  line-height: 24px;
+}
+
+// customize the event date
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .btn  {
+    padding-left: 15px;
+    padding-right: 15px;
+    .fa {
+      margin-right: 3px;
+    }
+  }
+
+  .btn-light {
+    color: $body-color;
+  }
+
+  .btn-light .fa {
+    color: $panel-action-color;
+  }
+}
+
+.btns-wrap {
+  .btn+.btn {
+    margin-left: 7px;
+  }
+}

@@ -1,0 +1,53 @@
+<app-page-layout pageTitle="Regulations">
+  <!-- sidebar regulations -->
+  <app-sidepanel>
+    <ul class="list org-list">
+      <li *ngFor="let org of organizations">
+        <h3 class="org-title">
+          <span class="org-logo">
+            <img [attr.src]="org.logo" [attr.alt]="org.name" />
+          </span>
+          <span>{{org.name}}</span>
+        </h3>
+        <ul class="list regulations-list">
+          <ng-container *ngFor="let reg of org.regulations">
+            <li class="reg-item" (click)="select(reg)" [class.active]="selected===reg">
+              {{reg.name}}
+            </li>
+          </ng-container>
+        </ul>
+      </li>
+    </ul>
+  </app-sidepanel>
+
+  <div class="content">
+    <!-- render the selected regulation banner -->
+    <div class="banner" [style.backgroundImage]="selected.banner ? 'url('+selected.banner+')' : ''">
+      <h3>{{selected.name}}</h3>
+      <sub>
+        <a [attr.href]="selected.communityLink">
+          <i class="fa fa-sign-out"></i>
+          Community Subspace
+        </a>
+      </sub>
+    </div>
+
+    <!-- render the regulation tabs -->
+    <app-page-tabs [tabNames]="tabs" [tabsData]="tabsData|async">
+      <div t-actions>
+        <div class="sort-wrapper">
+          <i class="fa fa-search"></i>Sort by:
+
+          <!-- dropdown for sorting documents -->
+          <div ngbDropdown placement="bottom-right" class="d-inline-block">
+            <div ngbDropdownToggle>{{sortBy}}</div>
+            <div ngbDropdownMenu>
+              <div class="dropdown-item" (click)="sortBy='recent'">recent</div>
+              <div class="dropdown-item" (click)="sortBy='name'">name</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-page-tabs>
+  </div>
+</app-page-layout>

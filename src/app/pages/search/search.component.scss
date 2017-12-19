@@ -1,0 +1,108 @@
+@import 'variables';
+
+app-sidepanel /deep/ .side-panel {
+  // add margin to apply button
+  .btn {
+    margin-top: 10px;
+  }
+}
+
+app-page-layout {
+  /deep/ {
+    .content-wrapper {
+      display: flex;
+    }
+  }
+
+  // customize collapsed layout, increase paddings
+  &.collapsed-layout /deep/ {
+    .search-results {
+      padding-right: 175px;
+      padding-left: 190px;
+    }
+  }
+}
+
+// make results take full width
+.search-results {
+  width: 100%;
+  padding: 22px 42px;
+}
+
+// filters header, contains active search filters
+.filters-header {
+  margin-top: 24px;
+  min-height: 32px;
+
+  &.query-search {
+    margin: 28px 0;
+    min-height: 18px;
+  }
+
+  strong {
+    margin-right: 20px;
+  }
+
+  .filter-item {
+    padding: 7px 15px;
+    background: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    .close-icon {
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .link {
+    line-height: 14px;
+  }
+
+  .link + .link {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: solid 1px $primary;
+  }
+}
+
+app-page-tabs {
+  /deep/ {
+    .tabs-content {
+      padding: 0;
+    }
+  }
+
+  .fa-search {
+    font-size: 14px;
+    margin: 0 7px;
+  }
+}
+
+// customize the quick search input
+app-quick-search-input {
+  width: 100%;
+  /deep/ {
+    .form-inline {
+      margin-right: 0;
+      width: 100%;
+
+      .btn {
+        background-color: $primary;
+        border-radius: 0 3px 3px 0;
+        height: 100%;
+      }
+
+      .fa {
+        color: white;
+      }
+    }
+
+    .form-control {
+      color: $body-color;
+      font-size: 14px;
+      background: $panel-bg-color;
+      width: 100%;
+    }
+  }
+}

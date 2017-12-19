@@ -1,0 +1,229 @@
+@import 'variables';
+
+.wrapper {
+  background: $panel-bg-color;
+
+  display: flex;
+  flex-direction: column;
+
+  // hide the body when collapsed
+  &.collapsed {
+    .sction-content {
+      display: none;
+    }
+  }
+}
+
+// panel header styles
+header {
+  color: $title-color;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  padding: 10px 20px;
+
+  border-bottom: 1px solid $body-bg;
+  flex: 0 0 auto;
+
+  h3 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    // if p-title content provided, center it vertically
+    /deep/ [p-title] {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+
+      .fa {
+        margin: 0 31px 0 11px;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+// make body take full height
+.sction-content {
+  height: 100%;
+  max-height: calc(100% - 65px);
+}
+
+// center the panel actions
+.panel-actions {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  z-index: 1;
+
+  .action, /deep/ [p-action] {
+    font-size: 18px;
+    &, &:hover {
+      color: $panel-action-color;
+    }
+
+    & + * {
+      margin-left: 22px;
+    }
+  }
+
+  /deep/ [p-actions] + .action {
+    margin-left: 22px;
+  }
+
+  .fscreen {
+    font-size: 22px;
+  }
+}
+
+// align & customize the search input
+.search-action {
+  display: flex;
+  align-items: center;
+
+  input {
+    border-radius: 0;
+    padding-left: 22px;
+    padding-right: 15px;
+    background: transparent;
+    margin-left: -15px;
+    margin-right: -13px;
+    width: 260px;
+
+    &, &:focus {
+      outline: 0 none;
+      box-shadow: none;
+      border-color: transparent;
+      border-bottom-color: $search-input-border-color;
+    }
+  }
+
+  .close-search {
+    font-size: 13px;
+  }
+
+  &.active {
+    .fa-search {
+      color: $search-input-border-color;
+    }
+  }
+
+  &:not(.active) {
+    input {
+      width: 0;
+      padding: 0;
+      margin: 0;
+      border-width: 0;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .close-search {
+      display: none;
+    }
+  }
+
+  // customize the typeahead popup
+  /deep/ ngb-typeahead-window {
+    padding: 20px 15px;
+    width: 260px;
+    border: 0 none;
+    box-shadow: 0 0 32px rgba(black, .04);
+    margin-top: 10px;
+
+    &:before {
+      content: "Result Found";
+      font-size: 12px;
+      font-weight: normal;
+      color: $panel-action-color;
+      display: block;
+
+      margin-bottom: 20px;
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      cursor: pointer;
+
+      & + .dropdown-item {
+        margin-top: 10px;
+      }
+
+      .search-result-logo {
+        display: inline-block;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        flex: 0 0 auto;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      .search-result-logo + * {
+        margin-left: 7px;
+      }
+
+      .icon {
+        display: block;
+        margin-left: auto;
+        color: $panel-action-color;
+      }
+
+      &.active {
+        color: $body-color;
+        background: transparent;
+      }
+
+      &:focus {
+        outline: 0 none;
+      }
+    }
+
+    // style for the result items
+    .result-title {
+      font-size: 14px;
+      color: $panel-action-color;
+
+      width: 165px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .r-title {
+        color: $body-color;
+        font-weight: bold;
+      }
+
+      .ngb-highlight {
+        color: $primary;
+        font-weight: inherit;
+      }
+    }
+
+    .result-link {
+      font-size: 12px;
+      margin-top: 12px;
+      &, &:hover {
+        color: $panel-action-color;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,600,700');
+
+@import 'variables';
+@import 'mixins';
+
+// include bootstrap style
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: $main-font;
+  min-width: 1366px;
+}
+
+.link {
+  color: $linkColor;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .15s ease;
+  &:hover {
+    color: darken($link-color, 15%);
+  }
+  &:focus {
+    outline: 0 none;
+  }
+  .fa {
+    margin: 0 5px;
+  }
+}
+
+.btn {
+  padding: 7px 20px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+input,
+select,
+textarea {
+  font-weight: 600;
+}
+input {
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+.iput-border {
+  border-color: $border-color;
+  &, &:focus {
+    color: rgba($body-color, .5);
+  }
+  @include placeholder {
+    color: rgba($body-color, .5);
+  }
+}
+
+// custom select style
+.select {
+  position: relative;
+  cursor: pointer;
+  // change arrow
+  &:after {
+    content: '\f107';
+    position: absolute;
+    right: 10px;;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $font-awesome;
+    font-size: 18px;
+    color: $panel-action-color;
+  }
+  select {
+    cursor: pointer;
+    appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+// custom dropdown
+.dropdown-menu {
+  min-width: auto;
+  border-radius: 2px;
+  border-color: rgba(0,0,0,.1);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+.dropdown-toggle {
+  appearance: none;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  &:after {
+    content: '\f078';
+    border: none;
+    vertical-align: baseline;
+    margin-left: 10px;
+    width: auto;
+    height: auto;
+    font-family: $font-awesome;
+    color: $panel-action-color;
+  }
+}
+.dropdown-item {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+// custom popover
+.popover {
+  min-width: 150px;
+  border-radius: 0;
+  font-family: $main-font;
+  font-size: 14px;
+  color: $body-color;
+  box-shadow: 0 1px 6px rgba(0,0,0,.1);
+
+  a {
+    color: inherit;
+    display: block;
+    transition: opacity .1s ease;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+// tabs with nav pills style
+.nav-pills {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 20px;
+
+  .nav-item {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 0;
+    background-color: $body-bg;
+    text-align: center;
+    padding: 10px;
+    color: $body-color;
+  }
+
+  .nav-link.active {
+    font-weight: 700;
+    color: $body-color;
+    background-color: white;
+  }
+}
+
+// tabs with nav
+.nav-tabs {
+  .nav-item {
+    margin-right: 50px;
+    padding: 8px 0 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: solid 3px transparent;
+    transition: border-color .15s ease;
+    cursor: pointer;
+    &.active,
+    &:hover {
+      border-color: $secondary;
+    }
+    &.active {
+      font-weight: 700;
+    }
+  }
+}
+.tab-pane {
+  margin-top: 20px;
+}
+
+// custom modal
+.modal-backdrop {
+  opacity: .75;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-open .modal {
+  overflow: hidden;
+}
+.modal-dialog {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  border-radius: 0;
+}
+
+.app-title-tooltip {
+  position: fixed;
+  height: 35px;
+  min-width: 135px;
+  line-height: 35px;
+  color: $tooltip-color;
+  background-color: $tooltip-bg;
+  font-size: 12px;
+  padding: 0 12px;
+  border-radius: 2px;
+  z-index: 10;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity .001s;
+  transform: translate(0, -50%);
+  margin-left: 15px;
+  white-space: nowrap;
+
+  &.visible {
+    opacity: 1;
+    transition: opacity .15s ease-in .15s;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 100%;
+  }
+}

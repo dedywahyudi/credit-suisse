@@ -1,0 +1,62 @@
+<!-- article viewer -->
+<!-- used in regulations, quickguide tab -->
+<div class="content">
+  <!-- list all articles in the sidebar -->
+  <div class="sidebar">
+    <!-- if allowed search, attach a search input -->
+    <ng-container *ngIf="allowSearch">
+      <app-quick-search-input noRedirect placeholder="Quick Search"></app-quick-search-input>
+    </ng-container>
+
+    <ng-container *ngFor="let art of articles;let i=index">
+      <div class="art-li-header" *ngIf="art.header">
+        {{art.header}}
+      </div>
+      <a class="art-li-item" href="javascript:;" (click)="view(art, i)" [class.active]="i===activeArticle.index">
+        {{art.title}}
+      </a>
+    </ng-container>
+  </div>
+
+  <!-- render the viewed article -->
+  <ng-container *ngIf="activeArticle as article">
+    <!-- article wraper -->
+    <div class="viewer">
+      <!-- article header, title + next/prev buttons -->
+      <div class="d-flex align-items-center justify-content-between">
+        <h3>{{article.title}}</h3>
+
+        <div class="nav">
+          <span class="prev fa fa-angle-left" [class.disabled]="!prevArticle" (click)="view(prevArticle, prevArticle.index)"></span>
+          <span class="next fa fa-angle-right" [class.disabled]="!nextArticle" (click)="view(nextArticle, nextArticle.index)"></span>
+        </div>
+      </div>
+
+      <!-- html description -->
+      <div class="article-description" [innerHtml]="article.description"></div>
+
+      <!-- related articles -->
+      <div>
+        <strong class="article-related">See also</strong>
+        <a [href]="r.url" *ngFor="let r of article.related">
+          {{r.title}}
+        </a>
+      </div>
+
+      <!-- next article link -->
+      <div>
+        <ng-container *ngIf="nextArticle">
+          <strong class="article-next">Next Article</strong>
+          <a href="javascript:;" (click)="view(nextArticle, nextArticle.index)">» {{nextArticle.title}}</a>
+        </ng-container>
+      </div>
+
+      <!-- let user vote article as "helpful" -->
+      <div class="article-help d-flex justify-content-start align-items-center">
+        <strong>Is this help?</strong>
+        <a href="javascript:;" class="choice">No</a>
+        <a href="javascript:;" class="choice">Yes</a>
+      </div>
+    </div>
+  </ng-container>
+</div>

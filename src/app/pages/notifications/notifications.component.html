@@ -1,0 +1,18 @@
+<!-- notifications page -->
+<app-page-layout pageTitle="Notifications">
+  <div class="content">
+    <!-- notifications wrapper -->
+    <ul class="notifications">
+      <!-- loop and render each notification -->
+      <ng-container *ngFor="let notif of notifications|async">
+        <li class="notification-wrap" [class.unread]="notif.unread">
+          <span class="icon">
+            <span class="fa" [ngClass]="notif.type"></span>
+          </span>
+          <p class="text">{{notif.text}}</p>
+          <sub class="date">{{notif.created}}</sub>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</app-page-layout>

@@ -1,0 +1,245 @@
+[
+  {
+    "location": {
+      "lat": -21.474326,
+      "lng": 132.34295
+    },
+    "country": "Australia",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 73,
+    "milestones": 85,
+    "items": [
+      {
+        "name": "APRA",
+        "logo": "/assets/img/regulators/apra.png",
+        "link": "https://www.apra.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 22.317283,
+      "lng": 114.179321
+    },
+    "country": "Hong Kong",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 7,
+    "milestones": 70,
+    "items": [
+      {
+        "name": "SFC",
+        "logo": "/assets/img/regulators/sfc.png",
+        "link": "https://www.sfc.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 1.379209,
+      "lng": 103.884064
+    },
+    "country": "Singapore",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 32,
+    "milestones": 60,
+    "items": [
+      {
+        "name": "MAS",
+        "logo": "/assets/img/regulators/mas.png",
+        "link": "https://www.mas.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 37.942459,
+      "lng": 127.629169
+    },
+    "country": "South Korea",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 70,
+    "milestones": 57,
+    "items": [
+      {
+        "name": "BOK",
+        "logo": "/assets/img/regulators/bok.png",
+        "link": "https://www.bok.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 46.090689,
+      "lng": 7.189722
+    },
+    "country": "Switzerland",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 77,
+    "milestones": 25,
+    "items": [
+      {
+        "name": "FINMA",
+        "logo": "/assets/img/regulators/finma.png",
+        "link": "https://www.finma.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 51.209508,
+      "lng": 0.920314
+    },
+    "country": "United Kingdom",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 70,
+    "milestones": 46,
+    "items": [
+      {
+        "name": "PRA",
+        "logo": "/assets/img/regulators/pra.png",
+        "link": "https://www.pra.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 8484,
+      "lng": -104.727822
+    },
+    "country": "United States",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 31,
+    "milestones": 89,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 48.652056,
+      "lng": -95.43255
+    },
+    "country": "United States",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 73,
+    "milestones": 14,
+    "items": [
+      {
+        "name": "FED",
+        "logo": "/assets/img/regulators/fed.png",
+        "link": "https://www.fed.org"
+      },
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 1.022476,
+      "lng": 109.539705
+    },
+    "country": "Indonesia",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 52,
+    "milestones": 63,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 46.356566,
+      "lng": 4.534963
+    },
+    "country": "France",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 5,
+    "milestones": 4,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 43.995639,
+      "lng": 11.453221
+    },
+    "country": "Italy",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 96,
+    "milestones": 41,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 1.548564,
+      "lng": -65.498752
+    },
+    "country": "Venezuela",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 18,
+    "milestones": 77,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 51.745009,
+      "lng": 5.761346
+    },
+    "country": "Nederland",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 94,
+    "milestones": 2,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": -7.227743,
+      "lng": -55.305387
+    },
+    "country": "Brazil",
+    "flag": "/assets/img/flags/usa.png",
+    "documents": 97,
+    "milestones": 53,
+    "items": [
+      {
+        "name": "FASB",
+        "logo": "/assets/img/regulators/fasb.png",
+        "link": "https://www.fasb.org"
+      }
+    ]
+  }
+]

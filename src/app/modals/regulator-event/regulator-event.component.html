@@ -1,0 +1,29 @@
+<div class="modal-body">
+  <!-- modal title, event/milestone name -->
+  <div class="title">{{data.name}}</div>
+
+  <!-- close btn -->
+  <button class="btn btn-light btn-close" (click)="close()">
+    <i class="fa fa-close"></i>
+  </button>
+
+  <!-- milestone tags -->
+  <app-tags-list [tags]="data.tags"></app-tags-list>
+
+  <!-- milestone date -->
+  <div class="date">
+    <span>On {{data.date}} at {{data.time}}</span>
+    <button class="btn" [ngClass]="data.toggled ? 'btn-primary' : 'btn-light'" (click)="data.toggled=!data.toggled"><i class="fa fa-plus"></i> Add</button>
+  </div>
+
+  <!-- milestone details -->
+  <p class="description">{{data.description}}</p>
+
+  <!-- modal custom actions -->
+  <div class="btns-wrap">
+    <button class="btn btn-primary">Quick Guide</button>
+    <button class="btn btn-primary">Implementation Guide</button>
+    <button class="btn btn-primary">Community</button>
+  </div>
+</div>
+

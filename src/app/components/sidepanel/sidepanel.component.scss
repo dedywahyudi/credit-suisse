@@ -1,0 +1,47 @@
+@import 'variables';
+
+.side-panel {
+  height: 100%;
+  width: 277px;
+  padding: 22px;
+  background-color: $light;
+  flex: 0 0 auto;
+
+  // customize the collapsible view
+  &.collapsible {
+    position: relative;
+    transition: width 0.15s ease;
+
+    .toggle-btn {
+      position: absolute;
+      top: 86px;
+      right: -22px;
+      border-radius: 0 4px 4px 0;
+      background-color: $border-color;
+      font-size: 18px;
+      padding: 9px 8px;
+      color: $panel-action-color;
+      cursor: pointer;
+      .fa {
+        font-weight: 700;
+      }
+    }
+  }
+
+  // side panel colapsed
+  &.hidden {
+    width: 0;
+    padding: 0;
+    .toggle-btn {
+      background-color: $primary;
+      color: white;
+      .fa {
+        transform: rotate(180deg);
+      }
+    }
+
+    /deep/ > *:not(.toggle-btn) {
+      display: none;
+    }
+  }
+}

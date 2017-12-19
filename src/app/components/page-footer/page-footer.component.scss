@@ -1,0 +1,78 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $panel-bg-color;
+
+  height: 64px;
+  width: 100%;
+
+  padding: 10px 42px;
+}
+
+// common list styling
+.link-list {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// utility wrap & links styling
+.util-links {
+  font-size: 12px;
+  line-height: 12px;
+
+  li {
+    padding-right: 12px;
+    height: 13px;
+    color: $panel-action-color;
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  li + li {
+    padding-left: 12px;
+    border-left: 1px solid currentColor;
+  }
+
+  &:hover {
+    text-transform: underline;
+  }
+}
+
+// social icons wrap & links stylings
+.social-links {
+  font-size: 14px;
+
+  li {
+    width: 32px;
+    height: 32px;
+
+    background: $panel-action-color;
+    border-radius: 16px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.inc {
+      font-size: 16px;
+    }
+  }
+  a {
+    color: $component-active-color;
+  }
+  li + li {
+    margin-left: 11px;
+  }
+}

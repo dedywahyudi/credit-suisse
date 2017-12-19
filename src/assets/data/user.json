@@ -1,0 +1,20 @@
+{
+  "avatar": "/assets/img/users/samdoe.png",
+  "email": "glenn.m@email.com",
+  "fullname": "Glenn Maxwell",
+  "settings": {
+    "dashboard": {
+      "bookmarkedItems": true,
+      "globalRegulators": true,
+      "recentlyViewed": false,
+      "regulationsStandards": true,
+      "savedSearches": false,
+      "upcomingEvents": true
+    },
+    "notifications": {
+      "messages": true,
+      "website": true
+    }
+  },
+  "savedDocuments": 4
+}

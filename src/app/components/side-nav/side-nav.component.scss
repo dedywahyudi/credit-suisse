@@ -1,0 +1,104 @@
+@import 'variables';
+
+:host {
+  display: block;
+  height: 100%;
+  overflow: visible;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  background: $sidebar-bg-color;
+  color: $sidebar-color;
+  font-size: 16px;
+  transition: width .1s ease-in .05s;
+
+  // when sidebar is extended
+  &[expanded] {
+    width: 340px;
+  }
+
+  overflow-x: hidden;
+  a {
+    color: $component-active-color;
+  }
+}
+
+.nav-header {
+  height: 64px;
+  font-weight: bold;
+  text-transform: uppercase;
+  .nav-item {
+    cursor: default;
+    .icon {
+      cursor: pointer;
+    }
+  }
+}
+
+// navigation list
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    height: 64px;
+  }
+}
+
+.nav-url {
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba($nav-active-item-text-color, .5);
+  }
+
+  &.active {
+    font-weight: bold;
+    background: $nav-active-item-text-color;
+  }
+}
+
+.nav-item {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  padding: 0 21px 0 22px;
+  align-items: center;
+
+  .icon {
+    margin-right: 25px;
+    width: 21px;
+    display: inline-block;
+    flex: 0 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  // when sidebar is extended
+  [expanded] & {
+    padding-right: 18px;
+  }
+}
+
+.badge {
+  background: $nav-badge-bg-color;
+  font-style: normal;
+  font-size: .9em;
+
+  padding: 0 8px;
+  border-radius: 12px;
+  min-width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// push badge to right
+.spacer {
+  margin: 0 auto;
+}

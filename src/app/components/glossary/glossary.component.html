@@ -1,0 +1,21 @@
+<!-- Component used to render a title and the article viewer -->
+<!-- if there are multiple sections, will render a nav-pill too -->
+<div class="content">
+  <div class="headline">
+    <h3>{{title}}</h3>
+    <!-- the navigation if there are multiple sections -->
+    <ng-container *ngIf="data.length > 1">
+      <ul class="nav nav-pills justify-content-start">
+        <li class="nav-item" *ngFor="let t of data">
+          <a class="nav-link" href="javascript:;" [class.active]="t === activeTab" (click)="activate(t)">
+            {{t.title}}
+          </a>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="activeTab as tab">
+    <app-article-viewer [articles]="tab.sections" [allowSearch]="tab.search"></app-article-viewer>
+  </ng-container>
+</div>

@@ -1,0 +1,24 @@
+<div class="wrap">
+  <!-- date icon -->
+  <span class="date">
+    <span class="day">{{date|date:'dd'}}</span>
+    <sub class="month">{{date|date:'MMM'}}</sub>
+  </span>
+  <!-- details area -->
+  <div class="details">
+    <h5 class="title">{{data.name}}</h5>
+    <app-tags-list [tags]="data.tags"></app-tags-list>
+    <p class="description">{{data.shortDescription}}</p>
+
+    <a class="link details-link" href="javascript:;" (click)="openEventModal(regulatorEvent)">See Detail</a>
+
+    <a class="ellipsis" href="javascript:;">
+      <ng-content #content select="[actions]"></ng-content>
+    </a>
+  </div>
+</div>
+
+<!-- the details modal -->
+<ng-template #regulatorEvent let-close="close">
+  <app-regulator-event [data]="data" [close]="close"></app-regulator-event>
+</ng-template>
