@@ -1,0 +1,12 @@
+<div class="model-tips">
+  <div class="tips-sections" *ngFor="let item of items;let i=index">
+    <div class="title">{{item.name}}</div>
+    <p>
+      {{item.description}}
+    </p>
+    <a href="javascript:;" class="fa fa-close" (click)="removeItem(i)"></a>
+  </div>
+  <!--end .tips-sections-->
+
+</div>
+<!--end .model-tips-->

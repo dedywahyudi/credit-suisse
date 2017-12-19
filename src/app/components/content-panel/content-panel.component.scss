@@ -8,7 +8,7 @@
 
   // hide the body when collapsed
   &.collapsed {
-    .sction-content {
+    .section-content {
       display: none;
     }
   }
@@ -50,7 +50,7 @@ header {
 }
 
 // make body take full height
-.sction-content {
+.section-content {
   height: 100%;
   max-height: calc(100% - 65px);
 }
@@ -227,3 +227,44 @@ header {
     }
   }
 }
+
+.select-group {
+  display: block;
+  a {
+    padding: 0 10px;
+    color: $primary;
+    font-size: 12px;
+    font-weight: normal;
+    .num {
+      padding-right: 4px;
+    }
+    &:first-child {
+      border-right: 1px solid $primary;
+      cursor: default;
+    }
+  }
+}
+
+header {  
+  .action {
+    display: flex;
+  }
+  
+  // set content and style in detail mode
+  &.detail-view {
+    h3 {
+      margin-left: 20px;
+      /deep/ [p-title] {
+        color: #282828;
+        font-size: 22px;
+        text-transform: none;
+      }
+    }
+    
+    .blue-links {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+

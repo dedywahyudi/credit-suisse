@@ -1,0 +1,62 @@
+<app-modal-tips [items]="admin_modal_tips"></app-modal-tips>
+<!-- Overview page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+    <div class="row">
+      <div class="col-10  title-row">
+        <h4 class="left-titles">
+          Overview
+        </h4>
+        <div class="rights">
+          <div class="tip-wrapper">
+            <a href="javascript:;" class="btn blue-links" (click)="showManagePopup = true">Manage Overview</a>
+            <div class="tip-pannel">
+              
+            </div>
+          </div>
+          
+          <a [routerLink]="['/admin/events']" class="btn btn-white">View All List</a>
+        </div>
+        <!-- end .rights -->
+      </div>
+    </div>
+    <!-- top row-->
+    <div class="content-inner admin-dashboard">
+      <div class="row sortable-row" [appSortable]="{handle: '.drag-handler', group: 'name'}">
+        <div class="col col-xl-5 col-md-10" *ngFor="let boxItem of admin_overview_filtered"
+        [ngClass]="{hide: !boxItem.isShow}">
+          <app-content-panel-admin allowSearch minimizable 
+            [isDetailView]="false" [tableItem]="boxItem" [searchEntries]="boxItem['tableData']">
+            <span p-title>
+              <i class="fa" [ngClass]="boxItem.titleIcon"></i>{{boxItem.titleFull}}
+              <span class="drag-handler" appTitle="Drag & drop feature"></span>
+            </span>
+            <div content class="table-wrap">
+              <app-admin-overview-table [tableItem]="boxItem"></app-admin-overview-table>
+            </div>
+          </app-content-panel-admin>
+        </div>
+        <!-- col-5 -->
+      </div>
+      <!-- end .row -->
+    </div>
+    
+    <div class="admin-modal" [ngClass]="{hide: !showManagePopup}">
+      <div class="cover-layer" (click)="showManagePopup = false"></div>
+      <div class="modal-content">
+        <div class="title">Manage Overview</div>
+        <ul class="check-items">
+          <li class="clearfix" [ngClass]="{current: boxItem.isShow}"
+             *ngFor="let boxItem of admin_overview">
+            <a href="javascript:;" class="check-pic" (click)="clickManageBox(boxItem)"></a>
+            <a href="javascript:;" class="check-txt" (click)="clickManageBox(boxItem)">{{boxItem.titleFull}}</a>
+          </li>
+        </ul>
+        <a href="javascript:;" class="btn-close" (click)="showManagePopup = false">
+          <i class="fa fa-close"></i>
+        </a>
+      </div>
+    </div>
+    <!--end admin-modal-->
+  </div>
+</app-page-layout>

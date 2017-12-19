@@ -15,5 +15,8 @@ export const environment = {
     notifications: '/assets/data/notifications.json',
     messages: '/assets/data/messages.json',
     mapLocations: '/assets/data/map-locations.json',
+    adminOverview: '/assets/data/admin-overview.json',
+    adminModalTips: '/assets/data/admin-modal-tips.json',
+    adminEditQuickGuide: '/assets/data/admin-edit-quick-guide.json'
   },
 };

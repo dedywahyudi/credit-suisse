@@ -55,7 +55,7 @@ export class GoogleMapComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes) {
-    if(!this.waitApiInit) {
+    if (!this.waitApiInit) {
       return;
     }
 
@@ -88,7 +88,7 @@ export class GoogleMapComponent implements OnInit, OnChanges {
    */
   addMarkers() {
     // remove old markers and clusters
-    if(this.cluster) {
+    if (this.cluster) {
       this.cluster.clearMarkers();
     }
 

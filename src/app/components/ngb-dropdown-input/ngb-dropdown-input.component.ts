@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./ngb-dropdown-input.component.scss']
 })
 export class NgbDropdownInputComponent {
-  @Input() placeholder = "Select";
+  @Input() placeholder = 'Select';
   @Input() options = [];
   @Input() ngModel;
   @Output() ngModelChange: EventEmitter<any> = new EventEmitter;

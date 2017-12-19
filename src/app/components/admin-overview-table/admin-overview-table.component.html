@@ -1,0 +1,131 @@
+<div class="table-box" [ngClass]="{'scrollable-event-table': tableItem.titleFull === 'Events'}">
+  <div class="table-wrapper" [ngClass]="{'detail-view': isDetailTable}">
+  <table class="table" [ngClass]="{'filter-status': tableItem.isShowFilter}">
+    <thead>
+      <tr [sortablejs]="" [sortablejsOptions]="options">
+        <th class="ignore-elements"><div class="spacing"></div></th>
+        <th class="draggableItem" *ngFor="let item of tableItem.tableColumns">
+          <div class="spacing">
+            <a href="javascript:;" class="drag-icon">
+              <i class="fa fa-th"></i>
+            </a>
+            <span class="sort-links">
+              {{item.columnTitle}}
+              <span class="blue-tip">Sort by {{item.columnTitle}}</span>
+              <i class="fa fa-caret-down"></i>
+            </span>
+            <div class="form-group select" *ngIf="tableItem.isShowFilter">
+              <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+              <app-ngb-dropdown-input
+                name="year"
+                ngDefaultControl
+                placeholder="All"
+                [options]="['All', '1']"
+                [(ngModel)]="item.filterOption" 
+              ></app-ngb-dropdown-input>
+            </div>
+          </div>
+        </th>
+        <th class="ignore-elements">
+          <div class="spacing text-center">
+            <div>
+              Action
+            </div>
+            <a href="javascript:;" class="blue-links" (click)="clickReset(tableItem.tableColumns)">Reset</a>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="{'edit-status': rowItem.isEditMode, 'checked-line': rowItem.isChecked}"
+           *ngFor="let rowItem of tableItem.tableData">
+          <td>
+            <div class="spacing">
+              <span class="form-checkbox" 
+                [ngClass]="{'checked': rowItem.isChecked}"
+                (click)="clickRowCheckbox(tableItem, rowItem)">
+                <a href="javascript:;" class="btn-boxs">
+                  <i class="fa fa-check-square"></i>
+                </a>
+                <input type="checkbox" class="hidden-input" />
+              </span>
+            </div>
+          </td>
+          <td *ngFor="let cellItem of rowItem.rowData">
+            <div class="spacing edit-hidden " 
+              [ngClass]="{idCell: cellItem.isID === true,'fa-check-wrap': cellItem.hasFlag}">
+              <i class="fa fa-check fa-blue" *ngIf="cellItem.hasFlag"></i>
+              {{cellItem.value}}
+            </div>
+            <div class="form-group select" *ngIf="!cellItem.isID && rowItem.isEditMode">
+              <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+              <app-ngb-dropdown-input
+                name="year"
+                ngDefaultControl
+                placeholder="CCAR"
+                [options]="['CCAR', '1']"
+              ></app-ngb-dropdown-input>
+            </div>
+            
+  					<!-- end .dropdown-default -->
+          </td>
+          <td>
+            <div class="spacing text-center width175">
+              <div class="btn-boxs">
+           	  	<a href="javascript:;" class="btn btn-primary" (click)="rowItem.isEditMode = false">Save</a>
+           	  	<a href="javascript:;" class="blue-links" (click)="rowItem.isEditMode = false">Cancel</a>
+           	  </div>
+              <div class="action-boxs">
+                <a href="javascript:;" class="btn-control trash-btn"
+                   *ngIf="tableItem.tableHasTrashIcon">
+                  <i class="fa fa-trash fa-gray"></i>
+                  <span class="blue-tip">Trash {{tableItem.titleSingle}}</span>
+                </a>
+                <a href="javascript:;" class="btn-control" (click)="clickEditBtn(tableItem, rowItem)">
+                  <i class="fa fa-edit fa-blue"></i>
+                  <span class="blue-tip">Edit {{tableItem.titleSingle}}</span>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  <!-- end .table -->
+  </div>
+  <div class="table-bottom clearfix" *ngIf="!isDetailTable">
+    <div class="rights">
+      <a href="javascript:;" class="gray-txt" (click)="clickSeeAllLink(tableItem.title)">See All {{tableItem.title}}</a>
+    </div>
+  </div>
+  <!-- end .table-bottom -->
+  
+  <div class="pages" *ngIf="isDetailTable">
+	  <div class="left-text">
+	    <span class="txt">Show</span>
+	    <div class="form-group select">
+        <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+        <app-ngb-dropdown-input
+          name="year"
+          ngDefaultControl
+          placeholder="15"
+          [options]="['15', '30', '50']"
+        ></app-ngb-dropdown-input>
+      </div>
+	  </div>
+	  <div class="right-page">
+	    <a href="javascript:;" class="icons btn-icon-prev disable"></a>
+	    <ul>
+	      <li class="active" ><a href="javascript:;" class="link-blue">1</a>.</li>
+	      <li><a href="javascript:;" class="link-blue">2</a>.</li>
+	      <li><a href="javascript:;" class="link-blue">3</a>.</li>
+	      <li><a href="javascript:;" class="link-blue">4</a></li>
+	      <li><a href="javascript:;" class="link-blue">></a></li>
+	      <li><a href="javascript:;" class="link-blue">>></a></li>
+	    </ul>
+	    <a href="javascript:;" class="icons btn-icon-next"></a>
+	  </div>
+  </div>
+	<!-- end .pages -->
+</div>
+<!-- end .table-box -->

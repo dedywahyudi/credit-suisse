@@ -1,0 +1,2473 @@
+{
+  "tableCategoryData": [
+                        {
+                          "categoryName": "Events",
+                          "categoryIcon": "fa-calendar",
+                          "selected": true,
+                          "tableList": [
+                            {
+                              "title": "Events",
+                              "selected": true
+                            },
+                            {
+                              "title": "Quick Guides",
+                              "selected": false
+                            },
+                            {
+                              "title": "Implementation Guides",
+                              "selected": false
+                            },
+                            {
+                              "title": "Glossary",
+                              "selected": false
+                            }
+                          ]
+                        },
+                        {
+                          "categoryName": "Users",
+                          "categoryIcon": "fa-user-o",
+                          "selected": false,
+                          "tableList": [
+                            {
+                              "title": "Users",
+                              "selected": false
+                            }
+                          ]
+                        },
+                        {
+                          "categoryName": "Attributes",
+                          "categoryIcon": "fa-list-ul",
+                          "selected": false,
+                          "tableList": [
+                            {
+                              "title": "Attribute Types",
+                              "selected": false
+                            },
+                            {
+                              "title": "Category",
+                              "selected": false
+                            },
+                            {
+                              "title": "Country",
+                              "selected": false
+                            },
+                            {
+                              "title": "Document Type",
+                              "selected": false
+                            },
+                            {
+                              "title": "Regulation",
+                              "selected": false
+                            },
+                            {
+                              "title": "Regulator",
+                              "selected": false
+                            }
+                          ]
+                        },
+                        {
+                          "categoryName": "Regulations",
+                          "categoryIcon": "fa-check-square-o",
+                          "selected": false,
+                          "tableList": [
+                            {
+                              "title": "Documents",
+                              "selected": false
+                            },
+                            {
+                              "title": "Contacts",
+                              "selected": false
+                            }
+                          ]
+                        }
+  ],
+  "tableListData": [
+                {
+                  "title": "Events",
+                  "titleFull": "Events",
+                  "titleSingle": "Event",
+                  "addBtnTitle": "New Event",
+                  "titleIcon": "fa-calendar",
+                  "isShow": true,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": false,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "admin/edit-event",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Title",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Regulator",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Regulation",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Doc.Type",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Date",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Status",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "2",
+                      "rowData": [
+                        {
+                          "value": "2",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "2",
+                      "rowData": [
+                        {
+                          "value": "2",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "3",
+                      "rowData": [
+                        {
+                          "value": "3",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "567",
+                      "rowData": [
+                        {
+                          "value": "567",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "23",
+                      "rowData": [
+                        {
+                          "value": "23",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "1234",
+                      "rowData": [
+                        {
+                          "value": "1234",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "FED",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Others",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "08/31/2017",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Published",
+                          "hasFlag": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Quick Guides",
+                  "titleFull": "Quick Guides",
+                  "titleSingle": "Quick Guide",
+                  "addBtnTitle": "New Quick Guides",
+                  "titleIcon": "fa-calendar",
+                  "isShow": true,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": false,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "admin/edit-quick-guide",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Regulation",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Title",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "CCAR",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem Ipsum Dolor Sit Amet",
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Implementation Guides",
+                  "titleFull": "Implementation Guides",
+                  "titleSingle": "Implementation Guide",
+                  "addBtnTitle": "Implementation Guide",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": false,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Glossary",
+                  "titleFull": "Glossary",
+                  "titleSingle": "Glossary",
+                  "addBtnTitle": "Glossary",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "admin/edit-glossary",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "Term",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Phrase",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Definition",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "A-IRB",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Advanced Internal Ratings Approach",
+                          "isID": false,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+                          "isID": false,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Users",
+                  "titleFull": "Users",
+                  "titleSingle": "User",
+                  "addBtnTitle": "User",
+                  "titleIcon": "fa-user-o",
+                  "isShow": true,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "admin/edit-user",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "PID",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Name",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Roles",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Pia Wurtzbach",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Diana Nivea",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Olivia Jordan",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Estefania Fernandez",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Melly Koerniawan",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Olivia Wells",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Maya Dwijayanti",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "Administrator",
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Attribute Types",
+                  "titleFull": "Attribute Types",
+                  "titleSingle": "Attribute Type",
+                  "addBtnTitle": "Attribute Type",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Category",
+                  "titleFull": "Category Attribute",
+                  "titleSingle": "Category",
+                  "addBtnTitle": "Category",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Country",
+                  "titleFull": "Country Attribute",
+                  "titleSingle": "Country",
+                  "addBtnTitle": "Country",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Document Type",
+                  "titleFull": "Document Type",
+                  "titleSingle": "Document Type",
+                  "addBtnTitle": "Document Type",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Regulation",
+                  "titleFull": "Regulation Attribute",
+                  "titleSingle": "Regulation",
+                  "addBtnTitle": "Regulation",
+                  "titleIcon": "fa-list-ul",
+                  "isShow": true,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": true,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Regulation",
+                      "filterOption": "All"
+                    },
+                    {
+                      "columnTitle": "Category",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "ARF 730",
+                          "hasFlag": false
+                        },
+                        {
+                          "value": "APAC",
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Regulator",
+                  "titleFull": "Regulator Attribute",
+                  "titleSingle": "Regulator",
+                  "addBtnTitle": "Regulator",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Documents",
+                  "titleFull": "Documents Regulation",
+                  "titleSingle": "Document",
+                  "addBtnTitle": "Document",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Contacts",
+                  "titleFull": "Contacts Regulation",
+                  "titleSingle": "Contact",
+                  "addBtnTitle": "Contact",
+                  "titleIcon": "fa-calendar",
+                  "isShow": false,
+                  "isShowFilter": false,
+                  "checkedNum": 0,
+                  "tableHasTrashIcon": true,
+                  "tableIsInlineEdit": false,
+                  "tableEditUrl": "",
+                  "tableColumns": [
+                    {
+                      "columnTitle": "ID",
+                      "filterOption": "All"
+                    }
+                  ],
+                  "tableData": [
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    },
+                    {
+                      "isEditMode": false,
+                      "isChecked": false,
+                      "name": "123",
+                      "rowData": [
+                        {
+                          "value": "123",
+                          "isID": true,
+                          "hasFlag": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+}

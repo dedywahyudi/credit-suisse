@@ -1,0 +1,48 @@
+<!-- Overview page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+    <div class="admin-content">
+      <div class="head clearfix">
+        <div class="title">Edit Glossary</div>
+        <a href="javascript:;" class="btn-cancel" (click)="clickSaveChange()">Cancel</a>
+        <div class="buttons">
+          <a href="javascript:;" class="btn-gray">Delete</a>
+          <a href="javascript:;" class="btn-blue" (click)="clickSaveChange()">Save Change</a>
+        </div>
+        <!--end buttons-->
+      </div>
+      <!--end .head-->
+      <form>
+        <div class="admin-main">
+          <div class="input-group">
+            <label for="term-input">Term</label>
+            <div class="input-control">
+              <input id="term-input" type="text" placeholder="" value="A-IRB"/>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <label for="phrase-input">Phrase</label>
+            <div class="input-control">
+              <input id="phrase-input" type="text" placeholder="" value="Advanced Internal Ratings Approach"/>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <label>Definition</label>
+            <div class="input-control">
+              <quill-editor>
+                Lorem Ipsum Dolor Sit Amet
+              </quill-editor>
+            </div>
+          </div>
+          <!--end .input-group-->
+        </div>
+        <!--end .admin-main-->
+      </form>
+    </div>
+    <!--end.admin-content-->
+  </div>
+</app-page-layout>

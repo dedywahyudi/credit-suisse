@@ -1,0 +1,53 @@
+<!-- events page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+  	<div class="content-inner">
+	    <div class="top-bar">
+	  	  <div class="left-block">
+	  	    <div ngbDropdown class="d-inline-block dropdown-wrapper">
+            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>
+              <i class="fa fa-blue" [ngClass]="selectedCategoryIcon"></i>{{selectedCategory}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" *ngFor="let optionItem of tableCategory"
+                (click)="changeDropdown(optionItem)">
+                <i class="fa fa-blue" [ngClass]="optionItem.categoryIcon"></i>
+                {{optionItem.categoryName}}
+              </button>
+            </div>
+          </div>
+	        <div class="nav nav-tabs">
+  			    <ul class="clearfix">
+  		        <li class="nav-item" *ngFor="let navItem of selectedTabletList"
+  		           [ngClass]="{active: navItem.selected}"
+  		           (click)="selectNavItem(navItem)">
+  		          {{navItem.title}}
+  		        </li>
+  			    </ul>
+	  	    </div>
+		    </div>
+	  	  <!-- end .left-block -->
+  		  <div class="right-btn">
+  		    <a [routerLink]="['/admin']" class="btn btn-white">See Overview</a>
+  		  </div>
+  	  </div>
+  	  <!-- end .top-bar -->
+  	  
+  	  <div class="section events-section">
+	      <div class="section-content" *ngFor="let shownBoxItem of shownBoxItemList">
+	        <app-content-panel-admin allowSearch 
+	          [isDetailView]="true" [tableItem]="shownBoxItem" [searchEntries]="shownBoxItem['tableData']">
+            <span p-title>
+              {{shownBoxItem['titleFull']}}
+            </span>
+            <div content>
+              <app-admin-overview-table class="events-table" [isDetailTable]="true" [tableItem]="shownBoxItem"></app-admin-overview-table>
+            </div>
+          </app-content-panel-admin>
+	      </div>
+	      <!-- end .section-content -->
+	    </div>
+	    <!-- end .events-setion -->
+	  </div> 
+  </div>
+</app-page-layout>

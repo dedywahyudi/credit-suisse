@@ -1,0 +1,17 @@
+1."admin/events: click "Show Filter" -> the dropdowns are not showing actual data under that column."
+  "admin/events: click on the add button is not working."
+  "admin/edit-event: the links add buttons are not working."
+  "admin/edit-quick-guide: the delete and update buttons are not working."
+  "/admin/edit-event- the description "6 Character" shall update on adding content in the editor."
+Confirmed they are out of scope.
+
+2."admin: 'Manage Overview' link text color is not matching as per the design"
+  "admin: 'View All List' button text color is not matching as per the design."
+  "admin/events: 'See Overview' button text color is not matching as per the design."
+Checked again,issues do not exist.
+
+3."admin: the events widget -> scrollbars are not matching as per the design."
+Wiki said:"You can use browser based scrollbar".
+
+4."admin/events: drag any column -> it is not dragging and dropping while column, but it drags only column header."
+It has been the best way to implement in FF submission,please mark this to be fixed.

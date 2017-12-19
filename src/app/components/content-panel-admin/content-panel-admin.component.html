@@ -1,16 +1,21 @@
 <article class="wrapper" [ngClass]="{collapsed: collapsed}">
   <!-- panel header -->
-  <header>
+  <header [ngClass]="{'detail-view' : isDetailView,'selecting': tableItem.checkedNum>0}">
     <!-- panel title -->
-    <h3>
+    <h3 *ngIf="tableItem.checkedNum === 0">
       <ng-content select="[p-title]"></ng-content>
     </h3>
+    <div class="select-group" *ngIf="tableItem.checkedNum > 0">
+	    <a href="javascript:;"><span class="num">{{tableItem.checkedNum}}</span>Item{{tableItem.checkedNum > 1 ? 's' : ''}} Selected</a>
+	    <a href="javascript:;" (click)="clickSelectAll(tableItem)">Select All</a>
+    </div>
     <!-- panel right actions -->
     <div class="panel-actions">
       <!-- allow one to provide content in the panel's actions -->
       <ng-content select="[p-actions]"></ng-content>
       <!-- search functionality -->
-      <a class="action search-action" href="javascript:;" *ngIf="allowSearch!==false" [ngClass]="{active: searchToggled}">
+      <a class="action search-action" href="javascript:;" *ngIf="allowSearch!==false && tableItem.checkedNum === 0" 
+         [ngClass]="{active: searchToggled}">
         <i class="fa fa-search" (click)="toggleSearch(true);searchInput.focus()"></i>
         <input
           #searchInput
@@ -26,13 +31,26 @@
         <i class="fa fa-times close-search" (click)="toggleSearch(false)"></i>
       </a>
       <!-- minimize -->
-      <a class="action" href="javascript:;" *ngIf="minimizable!==false" (click)="collapsed=!collapsed">
+      <a class="action" href="javascript:;" *ngIf="minimizable!==false && tableItem.checkedNum === 0" 
+         (click)="collapsed=!collapsed">
         <i class="fa" [ngClass]="collapsed ? 'fa-plus' : 'fa-minus'"></i>
       </a>
-      <!-- maximize/fullscreen -->
-      <a class="action fscreen" href="javascript:;" *ngIf="allowFullScreen!==false" (click)="toggleFullscreen.emit()">
-        <i class="fa" [ngClass]="isFullscreen ? 'fa-compress' : 'fa-arrows-alt'"></i>
-      </a>
+      <div class="control-boxs" *ngIf="isDetailView && tableItem.checkedNum === 0">
+        <a href="javascript:;" class="blue-links" 
+          *ngIf="!tableItem.isShowFilter"
+          (click)="tableItem.isShowFilter = true">
+          <i class="fa fa-plus"></i>
+          Show Filter
+        </a>
+        <a href="javascript:;" class="blue-links" 
+          *ngIf="tableItem.isShowFilter"
+          (click)="tableItem.isShowFilter = false">
+          <i class="fa fa-minus"></i>
+          Hide Filter
+        </a>
+        <a href="javascript:;" class="btn btn-primary"><i class="fa fa-plus"></i>Add {{tableItem.addBtnTitle}}</a>
+      </div>
+      <a href="javascript:;" class="btn btn-gray" *ngIf="tableItem.checkedNum > 0">Delete</a>
     </div>
   </header>
   <!-- panel content -->
@@ -44,18 +62,11 @@
 <!-- template for the results dropdown -->
 <ng-template #rt let-r="result" let-t="term">
   <!-- render the item logo -->
-  <span class="search-result-logo">
-    <img [src]="r['logo']" alt=""/>
-  </span>
-  <!-- render item details -->
   <div>
     <div class="result-title">
       <!-- show the "matched" text -->
       <ngb-highlight class="r-title" [result]="r.name" [term]="t"></ngb-highlight>
-      <span *ngIf="r.country">-</span>
-      <ngb-highlight [result]="r.country" [term]="t"></ngb-highlight>
     </div>
-    <a class="result-link" [attr.href]="r.link" target="_blank">{{r.link|url}}</a>
   </div>
   <i class="icon fa fa-chevron-right"></i>
 </ng-template>

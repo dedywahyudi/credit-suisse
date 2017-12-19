@@ -1,0 +1,139 @@
+<!-- Overview page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+    <div class="admin-content">
+      <div class="head clearfix">
+        <div class="title">Edit Event</div>
+        <a href="javascript:;" class="btn-cancel" (click)="clickSaveChange()">Cancel</a>
+        <div class="buttons">
+          <a href="javascript:;" class="btn-gray">Archieve</a>
+          <a href="javascript:;" class="btn-gray">Delete</a>
+          <a href="javascript:;" class="btn-blue">Set as Draft</a>
+          <a href="javascript:;" class="btn-blue" (click)="clickSaveChange()">Save Change</a>
+        </div>
+        <!--end buttons-->
+      </div>
+      <!--end .head-->
+      <form>
+        <div class="admin-main">
+          <div class="input-group">
+            <label for="title-input">Title</label>
+            <div class="input-control">
+              <input id="title-input" type="text" placeholder="" value="Lorem Ipsum Dolor Sit Amet"/>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <label>Description
+              <span>6 Characters</span>
+            </label>
+            <div class="input-control">
+              <quill-editor>
+                Annual
+              </quill-editor>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group clearfix">
+            <div class="select-group">
+              <label>Regulators</label>
+              <div class="input-control">
+                <div class="form-group select">
+                  <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+                  <app-ngb-dropdown-input
+                    name="year"
+                    ngDefaultControl
+                    placeholder="FED"
+                    [options]="['FED']"
+                    [(ngModel)]="filters.regulator"
+                  ></app-ngb-dropdown-input>
+                </div>
+              </div>
+            </div>
+            <!--end .select-group-->
+            <div class="select-group">
+              <label>Regulation</label>
+              <div class="input-control">
+                <div class="form-group select">
+                  <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+                  <app-ngb-dropdown-input
+                    name="year"
+                    ngDefaultControl
+                    placeholder="CCAR"
+                    [options]="['CCAR']"
+                    [(ngModel)]="filters.regulation"
+                  ></app-ngb-dropdown-input>
+                </div>
+              </div>
+            </div>
+            <!--end .select-group-->
+            <div class="select-group">
+              <label>Documet Type</label>
+              <div class="input-control">
+                <div class="form-group select">
+                  <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+                  <app-ngb-dropdown-input
+                    name="year"
+                    ngDefaultControl
+                    placeholder="Other"
+                    [options]="['Other', 'Excel']"
+                    [(ngModel)]="filters.documentType"
+                  ></app-ngb-dropdown-input>
+                </div>
+              </div>
+            </div>
+            <!--end .select-group-->
+            <div class="select-group">
+              <label>Event Type</label>
+              <div class="input-control">
+                <div class="form-group select">
+                  <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+                  <app-ngb-dropdown-input
+                    name="year"
+                    ngDefaultControl
+                    placeholder="Dealine"
+                    [options]="['Dealine']"
+                    [(ngModel)]="filters.eventType"
+                  ></app-ngb-dropdown-input>
+                </div>
+              </div>
+            </div>
+            <!--end .select-group-->
+            <div class="select-group">
+              <label>Date</label>
+              <div class="input-control">
+                <div class="form-group select">
+                  <!-- myeah, ng bootstrap dropdown in a form, because reasons -->
+                  <app-ngb-dropdown-input
+                    name="year"
+                    ngDefaultControl
+                    placeholder="05/31/2017"
+                    [options]="['05/31/2017', '06/30/2017', '07/30/2017']"
+                    [(ngModel)]="filters.year"
+                  ></app-ngb-dropdown-input>
+                </div>
+              </div>
+            </div>
+            <!--end .select-group-->
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <label for="link-input">Links</label>
+            <div class="input-links clearfix">
+              <a href="javascript:;" class="add-btn">+</a>
+              <div class="input-control">
+                <input id="link-input" type="text" placeholder="Enter"/>
+              </div>
+            </div>
+          </div>
+          <!--end .input-group-->
+        </div>
+        <!--end .admin-main-->
+      </form>
+    </div>
+    <!--end.admin-content-->
+  </div>
+</app-page-layout>

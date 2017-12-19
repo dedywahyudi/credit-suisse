@@ -42,3 +42,9 @@ app-page-header {
   min-height: 100vh;
   min-height: calc(100vh - 128px);
 }
+
+@media (max-width: 1365px) { 
+  app-page-header {
+    min-width: 0;
+  }
+}

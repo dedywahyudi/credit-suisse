@@ -1,0 +1,69 @@
+<!-- Overview page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+    <div class="admin-content">
+      <div class="head clearfix">
+        <div class="title">Edit User</div>
+        <a href="javascript:;" class="btn-cancel" (click)="clickCancel()">Cancel</a>
+        <div class="buttons">
+          <a href="javascript:;" class="btn-gray">Delete</a>
+          <a href="javascript:;" class="btn-blue" (click)="clickSaveChange()">Save Change</a>
+        </div>
+        <!--end buttons-->
+      </div>
+      <!--end .head-->
+      <form>
+        <div class="admin-main">
+          <div class="input-group">
+            <label for="PID-input">PID</label>
+            <div class="pid-group clearfix">
+              <div class="check" (click)="switchEnabled = !switchEnabled">
+                <span class="check-pic" [ngClass]="{current: switchEnabled}"></span>
+                <span class="check-txt">Enabled</span>
+              </div>
+              <div class="input-control">
+                <input id="PID-input" type="text" placeholder="" value="123"/>
+              </div>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <div class="margin-right clearfix">
+              <div class="name-group">
+                <label for="first-name-input">First Name</label>
+                <div class="input-control">
+                  <input id="first-name-input" type="text" placeholder="" value="Pia"/>
+                </div>
+              </div>
+              <!--end .name-group-->
+              <div class="name-group">
+                <label for="last-name-input">Last Name</label>
+                <div class="input-control">
+                  <input id="last-name-input" type="text" placeholder="" value="Wurtzbach"/>
+                </div>
+              </div>
+              <!--end .name-group-->
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <label>Roles</label>
+            <ul class="check-items">
+              <li class="clearfix" [ngClass]="{current: item.checked}"
+                 (click)="item.checked = !item.checked"
+                 *ngFor="let item of switchList">
+                <span class="check-pic"></span>
+                <span class="check-txt">{{item.title}}</span>
+              </li>
+            </ul>
+          </div>
+          <!--end .input-group-->
+        </div>
+        <!--end .admin-main-->
+      </form>
+    </div>
+    <!--end.admin-content-->
+  </div>
+</app-page-layout>

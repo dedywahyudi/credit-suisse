@@ -30,3 +30,12 @@
     color: $navbar-action-color;
   }
 }
+
+@media (max-width: 1365px) {
+  .form-inline {
+    margin-right: 20px;
+    .form-control {
+      width: 307px;
+    }
+  }
+}

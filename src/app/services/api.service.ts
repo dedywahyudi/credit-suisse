@@ -128,4 +128,28 @@ export class ApiService {
     return this.http.get(this.api.mapLocations).map((res: Response) => res.json())
       .catch(e => ([]));
   }
+
+  /**
+   * getAdminOverviewData Get data to display on Admin Overview page
+   */
+  getAdminOverviewData() {
+    return this.http.get(this.api.adminOverview).map((res: Response) => res.json())
+      .catch(e => ([]));
+  }
+
+  /**
+   * getAdminModalTipsData Get data to display on Admin Modal Tips
+   */
+  getAdminModalTipsData() {
+    return this.http.get(this.api.adminModalTips).map((res: Response) => res.json())
+      .catch(e => ([]));
+  }
+
+  /**
+   * getAdminEditQuickGuideData Get data to display on Admin Edit Quick Guide page
+   */
+  getAdminEditQuickGuideData() {
+    return this.http.get(this.api.adminEditQuickGuide).map((res: Response) => res.json())
+      .catch(e => ([]));
+  }
 }

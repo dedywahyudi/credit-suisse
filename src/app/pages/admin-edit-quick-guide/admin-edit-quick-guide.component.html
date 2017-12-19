@@ -1,0 +1,211 @@
+<!-- Overview page -->
+<app-page-layout pageTitle="Admin">
+  <div class="content">
+    <div class="admin-content">
+      <div class="head clearfix">
+        <div class="title">Edit Quick Guide</div>
+        <a href="javascript:;" class="btn-cancel" (click)="clickCancel()">Cancel</a>
+        <div class="buttons">
+          <a href="javascript:;" class="btn-gray">Delete</a>
+          <a href="javascript:;" class="btn-blue" (click)="clickSaveChange()">Save Change</a>
+        </div>
+        <!--end buttons-->
+      </div>
+      <!--end .head-->
+      <form>
+        <div class="admin-main">
+          <div class="input-group">
+            <label for="title-input">Title</label>
+            <div class="input-control">
+              <input id="title-input" type="text" placeholder="" value="Lorem Ipsum Dolor Sit Amet"/>
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <div class="margin-right clearfix">
+              <div class="name-group">
+                <label>Regulators</label>
+                <p>IFRS 9 Classification & Measurement</p>
+              </div>
+              <!--end .name-group-->
+              <div class="name-group">
+                <label>Status</label>
+                <p class="status-txt"><i class="fa fa-check fa-blue"></i>Pbulished</p>
+              </div>
+              <!--end .name-group-->
+            </div>
+          </div>
+          <!--end .input-group-->
+
+          <div class="input-group">
+            <ngb-tabset>
+              <ngb-tab>
+                <ng-template ngbTabTitle>SECTIONS</ng-template>
+                <ng-template ngbTabContent>
+                  <div class="guide-content clearfix">
+                    <div class="left">
+                      <div class="title">
+                        <span>Sections ({{admin_edit_quick_guide.sectionData.list.length}})</span>
+                        <a href="javascript:;">+ Create New</a>
+                      </div>
+                      <div class="nav" [appSortable]="{handle: '.fa-th', group: 'name'}">
+                        <a href="javascript:;" 
+                           *ngFor="let listItem of admin_edit_quick_guide.sectionData.list"
+                           [ngClass]="{'current': listItem.isCurrent}"
+                           (click)="clickListItem(admin_edit_quick_guide.sectionData, listItem)">
+                          {{listItem.title}}<i class="fa fa-th"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <!--end .left-->
+                    <div class="right">
+                      <div class="input-group">
+                        <label for="section-title-input">Section Title</label>
+                        <div class="input-control">
+                          <input id="section-title-input" name="input" type="text" placeholder="" 
+                                 [ngModel]="admin_edit_quick_guide.sectionData.currentItem.title"/>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+
+                      <div class="input-group">
+                        <label>Description
+                          <span>250 Characters</span>
+                        </label>
+                        <div class="input-control">
+                          <quill-editor name="textarea" 
+                            [(ngModel)]="admin_edit_quick_guide.sectionData.currentItem.description">
+                          </quill-editor>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                      <div class="input-group">
+                        <div class="buttons">
+                          <a href="javascript:;" class="btn-gray">Delete</a>
+                          <a href="javascript:;" class="btn-blue">Update Section</a>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                    </div>
+                    <!--end .right-->
+                  </div>
+                  <!--end guide-content-->
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab>
+                <ng-template ngbTabTitle>IMPACTS</ng-template>
+                <ng-template ngbTabContent>
+                  <div class="guide-content clearfix">
+                    <div class="left">
+                      <div class="title">
+                        <span>Impacts ({{admin_edit_quick_guide.impactData.list.length}})</span>
+                        <a href="javascript:;">+ Create New</a>
+                      </div>
+                      <div class="nav" [appSortable]="{handle: '.fa-th', group: 'name'}">
+                        <a href="javascript:;" 
+                           *ngFor="let listItem of admin_edit_quick_guide.impactData.list"
+                           [ngClass]="{'current': listItem.isCurrent}"
+                           (click)="clickListItem(admin_edit_quick_guide.impactData, listItem)">
+                          {{listItem.title}}<i class="fa fa-th"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <!--end .left-->
+                    <div class="right">
+                      <div class="input-group">
+                        <label for="impact-title-input">Impact Title</label>
+                        <div class="input-control">
+                          <input id="impact-title-input" name="input" type="text" placeholder="" 
+                                 [ngModel]="admin_edit_quick_guide.impactData.currentItem.title"/>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+
+                      <div class="input-group">
+                        <label>Description
+                          <span>250 Characters</span>
+                        </label>
+                        <div class="input-control">
+                          <quill-editor name="textarea" 
+                            [(ngModel)]="admin_edit_quick_guide.impactData.currentItem.description">
+                          </quill-editor>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                      <div class="input-group">
+                        <div class="buttons">
+                          <a href="javascript:;" class="btn-gray">Delete</a>
+                          <a href="javascript:;" class="btn-blue">Update Impact</a>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                    </div>
+                    <!--end .right-->
+                  </div>
+                  <!--end guide-content-->
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab>
+                <ng-template ngbTabTitle>GLOSSARY</ng-template>
+                <ng-template ngbTabContent>
+                  <div class="guide-content clearfix">
+                    <div class="left">
+                      <div class="title">
+                        <span>Glossaries ({{admin_edit_quick_guide.glossaryData.list.length}})</span>
+                        <a href="javascript:;">+ Create New</a>
+                      </div>
+                      <div class="nav" [appSortable]="{handle: '.fa-th', group: 'name'}">
+                        <a href="javascript:;" 
+                           *ngFor="let listItem of admin_edit_quick_guide.glossaryData.list"
+                           [ngClass]="{'current': listItem.isCurrent}"
+                           (click)="clickListItem(admin_edit_quick_guide.glossaryData, listItem)">
+                          {{listItem.title}}<i class="fa fa-th"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <!--end .left-->
+                    <div class="right">
+                      <div class="input-group">
+                        <label for="glossary-title-input">Glossary Title</label>
+                        <div class="input-control">
+                          <input id="glossary-title-input" name="input" type="text" placeholder="" 
+                                 [ngModel]="admin_edit_quick_guide.glossaryData.currentItem.title"/>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+
+                      <div class="input-group">
+                        <label>Description
+                          <span>250 Characters</span>
+                        </label>
+                        <div class="input-control">
+                          <quill-editor name="textarea" 
+                            [(ngModel)]="admin_edit_quick_guide.glossaryData.currentItem.description">
+                          </quill-editor>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                      <div class="input-group">
+                        <div class="buttons">
+                          <a href="javascript:;" class="btn-gray">Delete</a>
+                          <a href="javascript:;" class="btn-blue">Update Glossary</a>
+                        </div>
+                      </div>
+                      <!--end .input-group-->
+                    </div>
+                    <!--end .right-->
+                  </div>
+                  <!--end guide-content-->
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+          </div>
+          <!--end .input-group-->
+        </div>
+        <!--end .admin-main-->
+      </form>
+    </div>
+    <!--end.admin-content-->
+  </div>
+</app-page-layout>

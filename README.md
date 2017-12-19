@@ -70,26 +70,22 @@ $ heroku apps:create <application-name>
 ```
 Replace `<application-name>` with the name of the application you'd like. eg:
 ``` sh
-$ heroku apps:create csglobal-tc
+$ heroku apps:create admin-pages-ui
 ```
 
-Build the application:
-``` sh
-$ ng build -prod
-```
+$ cd my-project/
+$ git init
+$ heroku git:remote -a admin-pages-ui
+Deploy your application
 
-Add the code to your heroku instance:
-``` sh
+Commit your code to the repository and deploy it to Heroku using Git.
+
 $ git add .
-$ git commit -m "init"
-```
-
-Finally, deploy to your heroku instance:
-``` sh
+$ git commit -am "make it better"
 $ git push heroku master
 ```
 
-See your running app at `https://<application-name>.heroku.com`, in the given example it would be: `https://csglobal-tc.herokuapp.com/`, or simply open it by running:
+See your running app at `https://<application-name>.heroku.com`, in the given example it would be: `https://admin-pages-ui.herokuapp.com/`, or simply open it by running:
 ``` sh
 $ heroku open
 ```

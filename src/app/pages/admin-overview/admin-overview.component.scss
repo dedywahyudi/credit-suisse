@@ -1,0 +1,258 @@
+@import 'variables';
+
+// make the page's content wrappper as flex
+app-page-layout {
+  /deep/ {
+    .content-wrapper {
+      display: flex;
+    }
+  }
+}
+.content {
+  width: 100%;
+}
+/* .content-inner*/
+.content-inner {
+  padding: 22px 11px;
+  width: 100%;
+  position: relative;
+}
+
+.sortable-chosen {
+  max-width: none;
+  opacity: 1!important;// the sortable library adds opacity on the element
+  // it is required to use !important in order to override that
+}
+
+// customize the element that is being dragged (the one intance that stays on the page)
+.sortable-chosen.sortable-ghost {
+  /deep/ article {
+    background: $body-bg;
+    * {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &.moved /deep/ article {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: $sortable-ghost-el-border;
+    }
+  }
+}
+
+// make other sortable cols transparent while dragging a sortable item
+.sortable-row [class^="col"]:not(.sortable-chosen) article {
+  /deep/ body.on-sort-dragging & {
+      opacity: .6;
+  }
+}  
+
+.drag-handler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  cursor: pointer;
+}
+.content {
+  .row {
+    margin: 0;
+  }
+}
+.title-row {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 45px;
+  border-bottom: 1px solid #f1f1f1;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-bottom: -22px;
+  .left-titles {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .tip-wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+  .rights {
+    .btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+.admin-dashboard {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    .col  {
+      margin-bottom: 20px;
+    }
+  }
+  .row:last-child {
+    
+    .col {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.wrapper.close-pannel {
+  .fa-minus {
+    &:before {
+      content: "\F067";
+    }
+  }
+  .section-content {
+    display: none;
+  }
+}
+
+
+
+//admin-modal
+.admin-modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  .cover-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.15);
+  }
+}
+
+.modal-content {
+  position: absolute;
+  right: 170px;
+  top: 128px;
+  width: 320px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0,0,0,0.15);
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .check-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    li {
+      margin-bottom: 12px;
+      .check-txt {
+        color: #939393;
+      }
+      &.current .check-txt {
+        color: #282828;
+      }
+      &.current .check-pic {
+        background: url("../../../assets/img/checked-icon.png");
+        background-size: 22px 11px;
+      }
+    }
+  }
+  .check-pic {
+    display: block;
+    float: left;
+    width: 22px;
+    height: 11px;
+    margin-right: 10px;
+    margin-top: 4px;
+    background: url("../../../assets/img/check-icon.png");
+    background-size: 22px 11px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+  .check-txt {
+    display: block;
+    font-size: 12px;
+    float: left;
+    line-height: 20px;
+  }
+  .btn-close {
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: #f8f8f8;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    i {
+      width: 10px;
+      height: 10px;
+      display: block;
+      color: #939393;
+      background-size: 10px;
+      margin: 11px;
+    }
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+
+
+@media (max-width: 1365px) {
+  .nav.nav-tabs {
+    .nav-item {
+      margin-right: 20px;
+    }
+  }
+  /* .content-inner*/
+  .content-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1023px) {  
+  .title-row {
+    height: 55px;
+    .left-titles {
+      font-size: 16px;
+    }
+    .rights {
+      .btn {
+        font-size: 11px;
+      }
+    }
+  }
+}

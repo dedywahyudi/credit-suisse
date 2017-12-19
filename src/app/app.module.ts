@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // bootstrap module
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SortablejsModule } from 'angular-sortablejs';
+import { QuillModule } from 'ngx-quill';
 
 // app main component
 import { AppComponent } from './app.component';
@@ -19,6 +21,13 @@ import { ProfilePageComponent } from './pages/profile/profile.component';
 import { RegulatorsPageComponent } from './pages/regulators/regulators.component';
 import { RegulationsPageComponent } from './pages/regulations/regulations.component';
 import { SearchPageComponent } from './pages/search/search.component';
+
+import { AdminOverviewPageComponent } from './pages/admin-overview/admin-overview.component';
+import { AdminEventsPageComponent } from './pages/admin-events/admin-events.component';
+import { AdminEditEventPageComponent } from './pages/admin-edit-event/admin-edit-event.component';
+import { AdminEditQuickGuidePageComponent } from './pages/admin-edit-quick-guide/admin-edit-quick-guide.component';
+import { AdminEditUserPageComponent } from './pages/admin-edit-user/admin-edit-user.component';
+import { AdminEditGlossaryPageComponent } from './pages/admin-edit-glossary/admin-edit-glossary.component';
 
 // app services
 import { ApiService } from './services/api.service';
@@ -36,6 +45,7 @@ import { PageLayoutComponent } from './components/page-layout/page-layout.compon
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
 import { ContentPanelComponent } from './components/content-panel/content-panel.component';
+import { ContentPanelAdminComponent } from './components/content-panel-admin/content-panel-admin.component';
 import { SaveFilterComponent } from './modals/save-filter/save-filter.component';
 import { ToggleInputComponent } from './components/toggle-input/toggle-input.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
@@ -52,8 +62,12 @@ import { ListingsPaneComponent } from './components/listings-pane/listings-pane.
 import { CardsGridComponent } from './components/cards-grid/cards-grid.component';
 import { GlossaryComponent } from './components/glossary/glossary.component';
 import { ArticleViewerComponent } from './components/article-viewer/article-viewer.component';
+import { ModalTipsComponent } from './components/modal-tips/modal-tips.component';
+import { AdminOverviewTableComponent } from './components/admin-overview-table/admin-overview-table.component';
+
 import { TitleDirective } from './directives/title.directive';
 import { NgbDropdownInputComponent } from './components/ngb-dropdown-input/ngb-dropdown-input.component';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +79,14 @@ import { NgbDropdownInputComponent } from './components/ngb-dropdown-input/ngb-d
     PageHeaderComponent,
     PageFooterComponent,
     ContentPanelComponent,
+    ContentPanelAdminComponent,
     SearchPageComponent,
+    AdminOverviewPageComponent,
+    AdminEventsPageComponent,
+    AdminEditEventPageComponent,
+    AdminEditQuickGuidePageComponent,
+    AdminEditUserPageComponent,
+    AdminEditGlossaryPageComponent,
     UrlPipe,
     SortableDirective,
     SaveFilterComponent,
@@ -88,6 +109,8 @@ import { NgbDropdownInputComponent } from './components/ngb-dropdown-input/ngb-d
     CardsGridComponent,
     GlossaryComponent,
     ArticleViewerComponent,
+    ModalTipsComponent,
+    AdminOverviewTableComponent,
     TitleDirective,
     NgbDropdownInputComponent,
   ],
@@ -96,6 +119,8 @@ import { NgbDropdownInputComponent } from './components/ngb-dropdown-input/ngb-d
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
+    SortablejsModule,
+    QuillModule,
     AppRoutingModule,
   ],
   providers: [

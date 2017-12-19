@@ -1,0 +1,152 @@
+@import 'variables';
+
+// make the page's content wrappper as flex
+app-page-layout {
+  /deep/ {
+    .content-wrapper {
+      display: flex;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  
+}
+.content {
+  .row {
+    margin: 0;
+  }
+}
+/* .content-inner*/
+.content-inner {
+  padding: 22px 21px;
+  width: 100%;
+  position: relative;
+}
+.fa-blue {
+	color: $primary;
+}
+
+/* .section-content */
+.section-content {
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+
+/* .section */
+.section {
+  background: #fff;
+}
+
+/* .top-bar */
+.top-bar {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $panel-bg-color;
+  height: 64px;
+  background-color: #f1f1f1;
+  position: relative;
+  .left-block {
+    padding-right: 20px;
+    .nav-tabs {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+      .nav-item {
+          float: left;
+          list-style: none;
+      }
+    }
+    .fa {
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    .dropdown-wrapper {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      color: $primary;
+      vertical-align: middle;
+      min-width: 135px;
+      height: 33px;
+      font-size: 14px;
+      padding-right: 20px;
+      margin-top: -15px;
+      border-right: 1px solid #d7d7d7;
+      .dropdown {
+        float: right;
+      }
+      .dropdown-toggle {
+        height: 34px;
+        line-height: 34px;
+        padding-right: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #1f6cae;
+          &:after {
+            color: $primary;
+          }
+        }
+      }
+  }
+}
+
+@media (max-width: 1365px) {
+  .top-bar {
+    height: auto;
+    padding-bottom: 10px;
+    .right-btn {
+      display: block;
+      position: absolute;
+      top: -5px;
+      right: 20px;
+      margin: 0;
+    }
+    .left-block {
+      .nav-tabs {
+        max-width: 100%;
+        overflow: auto;
+        padding-left: 20px;
+        ul {
+          width: auto;
+          margin-bottom: 0;
+          padding-left: 0;
+        }
+        .nav-item {
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 1023px) {
+  .top-bar {
+    display: block;
+    padding-bottom: 10px;
+    .left-block {
+      .nav-tabs {
+        display: block;
+        margin: 10px 0;
+        padding-left: 0;
+        .nav-item {
+          font-size: 12px;
+        }
+      }
+      .dropdown-wrapper {
+        min-width: 120px;
+        padding-right: 0;
+        margin-top: -5px;
+      }
+    }
+  }
+  
+      
+}
